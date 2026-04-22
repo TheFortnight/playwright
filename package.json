@@ -1,0 +1,13 @@
+{
+  "name": "expero-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:6546": "playwright test tests/6546_kbop_static_bages_mock.spec.js --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
