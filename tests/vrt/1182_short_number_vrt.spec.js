@@ -4,11 +4,8 @@ const { dismissOverlays } = require('../support/utils/overlays');
 
 const baseUrl = getBaseUrl();
 
-test('1179. auth popup closes from x button', async ({ page }) => {
-  await page.goto(`${baseUrl}omsk/catalog/zheludochno-kishechnye-sredstva`, {
-    waitUntil: 'domcontentloaded',
-    timeout: 45000,
-  });
+test('1182. sign in form with shorter phone number', async ({ page }) => {
+  await page.goto(`${baseUrl}omsk`, { waitUntil: 'load', timeout: 30000 });
 
   await dismissOverlays(page);
 
@@ -24,6 +21,13 @@ test('1179. auth popup closes from x button', async ({ page }) => {
   const modal = page.locator('.dialog .modal-container');
   await expect(modal).toBeVisible({ timeout: 15000 });
 
-  await modal.locator('.close-btn').click();
-  await expect(modal).toBeHidden({ timeout: 10000 });
+  await page.locator('#tel').click();
+  await page.locator('#tel').fill('00000');
+  await page.locator('.dialog .auth-form__code-btn').click({ force: true });
+
+  await expect(modal).toHaveScreenshot('1182_open-popup.png', {
+    animations: 'disabled',
+    caret: 'hide',
+    maxDiffPixelRatio: 0.05,
+  });
 });

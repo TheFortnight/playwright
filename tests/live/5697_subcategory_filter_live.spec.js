@@ -6,12 +6,15 @@ const baseUrl = getBaseUrl();
 const SEARCH_PATH = '/goods/medium/search?group_id=15968';
 
 test('5697. subcategory filter updates goods list', async ({ page }) => {
-  await page.goto(`${baseUrl}catalog/bad`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  await page.goto(`${baseUrl}omsk`, { waitUntil: 'load', timeout: 30000 });
   await dismissOverlays(page);
+  await page.waitForLoadState('networkidle');
+
+  await page.goto(`${baseUrl}catalog/bad`, { waitUntil: 'domcontentloaded', timeout: 45000 });
+  await page.waitForLoadState('networkidle');
 
   const productCards = page.locator('body .card');
-  await expect(productCards.first()).toBeVisible();
-  await page.waitForLoadState('networkidle');
+  await expect(productCards.first()).toBeVisible({ timeout: 30000 });
 
   const goodResult = page.locator('body .good-list__result');
   const initialProductCountText = await goodResult.textContent();
@@ -31,7 +34,7 @@ test('5697. subcategory filter updates goods list', async ({ page }) => {
   const requestPromise = page.waitForRequest(request => {
     return request.method() === 'GET' && request.url().includes(SEARCH_PATH);
   });
-  await selectedFilterTextLocator.click();
+  await subcategoryOption.click({ force: true });
 
   await expect(checkboxInput).toBeChecked();
 

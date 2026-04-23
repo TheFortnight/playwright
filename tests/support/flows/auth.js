@@ -2,7 +2,9 @@ const { expect } = require('@playwright/test');
 const { getSmsCode } = require('../utils/sms-code');
 
 async function loginWithSms(page, phone = '0000000000') {
-  await page.locator('button.auth').nth(1).click({ force: true });
+  const signInButton = page.getByRole('button', { name: 'Войти' }).first();
+  await expect(signInButton).toBeVisible({ timeout: 15000 });
+  await signInButton.click();
   await expect(page.locator('body .dialog')).toBeVisible({ timeout: 35000 });
   await page.locator('#tel').fill(phone);
   await page.locator('body .agreement-wrapper .agreement-item:nth-child(2) .custom-checkbox').click();

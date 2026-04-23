@@ -24,7 +24,7 @@ test('fetch and compare cashback badge', async ({ page, request }) => {
   console.log('FETCHED CASHBACK RESPONSE', JSON.stringify(body, null, 2));
   console.log('EXPECTED BADGE TEXT', expectedText);
 
-  await page.goto(`${baseUrl}products/${PRODUCT_SLUG}`, { waitUntil: 'commit', timeout: 30000 });
+  await page.goto(`${baseUrl}products/${PRODUCT_SLUG}`, { waitUntil: 'domcontentloaded', timeout: 30000 });
   await dismissOverlays(page);
 
   const badge = page.locator('body .good-card__left-block .manufacturer-cashback');

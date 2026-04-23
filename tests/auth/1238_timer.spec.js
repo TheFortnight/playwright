@@ -10,12 +10,13 @@ const { dismissOverlays } = require('../support/utils/overlays');
 test('1238. auth dialog shows resend timer after sending SMS', async ({ page }) => {
 
   await test.step('Open site and click sign in', async () => {
-    await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 35000 });
-    await expect(page.locator('.header-top-right')).toBeVisible({ timeout: 35000 });
+    await page.goto('/omsk', { waitUntil: 'load', timeout: 35000 });
+    await expect(page.locator('body .statistics')).toBeVisible({ timeout: 35000 });
     await dismissOverlays(page);
 
-    // Second .auth button matches the NW behaviour (index 1)
-    await page.locator('body .header-top-right .auth').nth(1).click({ force: true });
+    const signInButton = page.getByRole('button', { name: 'Войти' }).first();
+    await expect(signInButton).toBeVisible({ timeout: 15000 });
+    await signInButton.click();
     await expect(page.locator('.dialog .modal-container')).toBeVisible({ timeout: 15000 });
   });
 
