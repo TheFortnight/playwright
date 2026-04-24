@@ -14,7 +14,7 @@ async function loginWithSms(page, phone = '0000000000') {
   await expect(codeInput).toBeVisible({ timeout: 45000 });
   await codeInput.click();
   await page.keyboard.type(getSmsCode());
-  await expect(page.locator('body .auth-icon').first()).toBeVisible({ timeout: 45000 });
+  await expect(page.locator('body .dialog')).toBeHidden({ timeout: 45000 });
 }
 
 module.exports = { loginWithSms };

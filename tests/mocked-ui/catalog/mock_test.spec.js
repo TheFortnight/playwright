@@ -41,11 +41,7 @@ test('mock catalog card', async ({ page }) => {
     name: 'Дерматология',
   });
   await expect(dermatologyLink).toBeVisible();
-  await Promise.all([
-    page.waitForResponse(response => response.url().includes('/api/v2/catalog/goods/medium/search') && response.ok()),
-    page.waitForResponse(response => response.url().includes('/api/api_276/marketing/cashback/from_manufacturers/terms/by_goods') && response.ok()),
-    dermatologyLink.click(),
-  ]);
+  await dermatologyLink.click();
 
   const cards = page.locator('body .card');
   await expect(cards.first()).toBeVisible();

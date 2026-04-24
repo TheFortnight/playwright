@@ -11,3 +11,8 @@
 - Fixed `5697` by restoring the legacy portal-first startup flow before opening `catalog/bad`.
 - Firefox `1179` needed `domcontentloaded` instead of `load` on the product page.
 - Playwright did not reliably cover all browsers from one `--browser` command here; run Chromium, Firefox, and WebKit separately.
+
+## 2026-04-24
+- For SMS login flows, waiting for the auth modal to disappear is more stable than waiting for `body .auth-icon`.
+- For the search dropdown mock, `fill()` is more reliable than `insertText()` in WebKit.
+- For the catalog mock, the real `dermatologiya` requests match the mocked search/cashback URLs and bodies exactly when they fire; some Chromium iterations fail before the request path is reached.

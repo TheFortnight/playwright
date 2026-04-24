@@ -53,7 +53,7 @@ test('obninsk search dropdown stays empty for монурал', async ({ page }) 
   const searchInput = page.getByRole('search', { name: 'Поиск лекарств десктоп' });
   await expect(searchInput).toBeVisible();
   await searchInput.click();
-  await page.keyboard.insertText('монурал');
+  await searchInput.fill('монурал');
 
   await expect(page.locator('.show-all-btn')).toBeVisible();
   await expect(page.locator('.search-dropdown .good-card')).toHaveCount(0);
