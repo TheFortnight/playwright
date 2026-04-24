@@ -1,0 +1,43 @@
+const { test, expect } = require('@playwright/test');
+const { getBaseUrl } = require('../support/utils/env');
+const { dismissOverlays } = require('../support/utils/overlays');
+
+const baseUrl = getBaseUrl();
+
+test('1184. sign in form saves phone number after closing', async ({ page }) => {
+  await page.goto(`${baseUrl}omsk`, { waitUntil: 'load', timeout: 30000 });
+
+  await dismissOverlays(page);
+
+  const confirmCityButton = page.getByRole('button', { name: 'Да, я здесь' });
+  if (await confirmCityButton.count()) {
+    await confirmCityButton.click();
+  }
+
+  const signInButton = page.getByRole('button', { name: 'Войти' }).first();
+  await expect(signInButton).toBeVisible({ timeout: 15000 });
+  await signInButton.evaluate(button => button.click());
+
+  const modal = page.locator('.dialog .modal-container');
+  await expect(modal).toBeVisible({ timeout: 15000 });
+
+  const phoneInput = page.locator('#tel');
+  await phoneInput.click({ force: true });
+  await page.keyboard.type('00000');
+  await expect(phoneInput).toHaveValue(/\+7 \(000\) 00/);
+  await page.waitForTimeout(3000);
+
+  await modal.locator('.close-btn').evaluate(button => button.click());
+  await expect(modal).toBeHidden({ timeout: 10000 });
+
+  await signInButton.evaluate(button => button.click());
+  await expect(modal).toBeVisible({ timeout: 15000 });
+  await page.waitForTimeout(3000);
+  await expect(phoneInput).toHaveValue(/\+7 \(000\) 00/);
+
+  await expect(modal).toHaveScreenshot('1184_open-popup.png', {
+    animations: 'disabled',
+    caret: 'hide',
+    maxDiffPixelRatio: 0.05,
+  });
+});

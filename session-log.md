@@ -16,3 +16,4 @@
 - For SMS login flows, waiting for the auth modal to disappear is more stable than waiting for `body .auth-icon`.
 - For the search dropdown mock, `fill()` is more reliable than `insertText()` in WebKit.
 - For the catalog mock, the real `dermatologiya` requests match the mocked search/cashback URLs and bodies exactly when they fire; some Chromium iterations fail before the request path is reached.
+- Masked auth-phone VRTs needed a short settle delay after typing digits before close/reopen checks, and Firefox headed could require a forced click on auth modal controls.
