@@ -21,3 +21,5 @@
 ## 2026-04-27
 - Ported the privacy-policy and user-agreement auth modal VRTs to Playwright.
 - The visible agreement links in production open `/agreement/privacy-policy` and `/agreement/user-agreement` in a popup, and the agreement pages have duplicate `.agreement` nodes so the visible one must be targeted for screenshots.
+- Ported `1188` and `1189` auth flow tests to Playwright.
+- In the current auth modal, `.auth-form__code-btn` stays disabled until both agreement checkboxes are selected, and `body .code-dialog__change-phone` should be targeted from the page scope.

@@ -11,7 +11,6 @@ test('5697. subcategory filter updates goods list', async ({ page }) => {
   await page.waitForLoadState('networkidle');
 
   await page.goto(`${baseUrl}catalog/bad`, { waitUntil: 'domcontentloaded', timeout: 45000 });
-  await page.waitForLoadState('networkidle');
 
   const productCards = page.locator('body .card');
   await expect(productCards.first()).toBeVisible({ timeout: 30000 });

@@ -6,3 +6,4 @@
 - Hardened flaky catalog, search, and auth waits during production browser verification.
 - Ported auth VRTs for invalid input and save-number flows, and recorded cross-browser timing notes.
 - Ported privacy-policy and user-agreement auth modal VRTs and aligned the tests with the visible agreement links in production.
+- Ported the 1188 and 1189 auth flows to Playwright, and removed a brittle `networkidle` wait from the live 5697 catalog test.
