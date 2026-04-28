@@ -1,0 +1,1042 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e1406]:
+        - generic [ref=e1407]:
+          - paragraph [ref=e1408]: Ваш город
+          - button [ref=e1409] [cursor=pointer]:
+            - img [ref=e1411]
+        - paragraph [ref=e1414]: Омск
+        - generic [ref=e1415]:
+          - button "Да, я здесь" [ref=e1416] [cursor=pointer]
+          - button "Выбрать другой" [ref=e1417] [cursor=pointer]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - link [ref=e1418] [cursor=pointer]:
+            - /url: /omsk
+            - img [ref=e13]
+          - button [ref=e15] [cursor=pointer]
+        - generic [ref=e18]:
+          - generic [ref=e1419]:
+            - generic [ref=e1420] [cursor=pointer]:
+              - img [ref=e1422]
+              - generic [ref=e1424]: Омск
+            - generic [ref=e1425]: 236 аптек
+          - generic [ref=e19]:
+            - button "Войти" [ref=e20] [cursor=pointer]
+            - link [ref=e21] [cursor=pointer]:
+              - /url: /profile/favorites
+              - img [ref=e23]
+            - link "Корзина" [ref=e28] [cursor=pointer]:
+              - /url: /basket
+              - generic [ref=e29]: Корзина
+              - img [ref=e32]
+        - generic [ref=e34]:
+          - search "Блок поиска лекарств" [ref=e36]:
+            - generic [ref=e37]:
+              - search "Поиск лекарств десктоп" [ref=e39]
+              - button "Найти" [ref=e40] [cursor=pointer]:
+                - generic [ref=e41]: Найти
+          - generic:
+            - generic:
+              - generic:
+                - button "Войти"
+                - link:
+                  - /url: /profile/favorites
+                  - generic:
+                    - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - link "Корзина":
+                        - /url: /basket
+                        - generic: Корзина
+                        - generic:
+                          - generic:
+                            - img
+      - navigation "Main Menu" [ref=e46]:
+        - list [ref=e47]:
+          - listitem [ref=e48] [cursor=pointer]:
+            - link "Акции" [ref=e49]:
+              - /url: /promo
+          - listitem [ref=e50] [cursor=pointer]:
+            - link "Каталог" [ref=e1426]:
+              - /url: /omsk/catalog
+              - img [ref=e53]
+              - text: Каталог
+          - listitem [ref=e55] [cursor=pointer]:
+            - link "Похудение" [ref=e1427]:
+              - /url: /omsk/catalog/pokhudenie
+          - listitem [ref=e57] [cursor=pointer]:
+            - link "Аллергия" [ref=e1428]:
+              - /url: /omsk/catalog/allergiya
+          - listitem [ref=e59] [cursor=pointer]:
+            - link "Обезболивающие средства" [ref=e1429]:
+              - /url: /omsk/catalog/obezbolivayushchie-sredstva
+          - listitem [ref=e61] [cursor=pointer]:
+            - link "Антибиотики" [ref=e1430]:
+              - /url: /omsk/catalog/antibiotiki
+          - listitem [ref=e63] [cursor=pointer]:
+            - link "БАД" [ref=e1431]:
+              - /url: /omsk/catalog/bad
+          - listitem [ref=e65] [cursor=pointer]:
+            - link "Витамины" [ref=e1432]:
+              - /url: /omsk/catalog/vitaminy
+          - listitem [ref=e67] [cursor=pointer]:
+            - link "Простуда и грипп" [ref=e1433]:
+              - /url: /omsk/catalog/prostuda-i-gripp
+  - main [ref=e69]:
+    - generic [ref=e73]:
+      - navigation "breadcrumbs" [ref=e1435]:
+        - link "Главная" [ref=e1437] [cursor=pointer]:
+          - /url: /
+        - link "Каталог" [ref=e1440] [cursor=pointer]:
+          - /url: /omsk/catalog
+        - generic [ref=e1442]:
+          - generic: БАД
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - heading "БАД" [level=1] [ref=e1444]
+          - generic [ref=e94]: Найдено 9246 товаров
+        - generic [ref=e95]:
+          - complementary [ref=e96]:
+            - generic [ref=e103]:
+              - generic [ref=e105]:
+                - generic [ref=e106]: Подкатегория
+                - generic [ref=e107]:
+                  - generic [ref=e108]:
+                    - generic [ref=e113] [cursor=pointer]: БАД в сезон простуд
+                    - generic [ref=e118] [cursor=pointer]: БАД для глаз и ушей
+                    - generic [ref=e123] [cursor=pointer]: БАД для детей и подростков
+                    - generic [ref=e128] [cursor=pointer]: БАД для женщин
+                    - generic [ref=e133] [cursor=pointer]: БАД для кожи, волос и ногтей
+                    - generic [ref=e138] [cursor=pointer]: БАД для костей и суставов
+                  - button "Показать еще" [ref=e139] [cursor=pointer]
+              - generic [ref=e141]:
+                - generic [ref=e142]: Действующее вещество
+                - generic [ref=e143]:
+                  - generic [ref=e144]:
+                    - generic [ref=e149] [cursor=pointer]: Рыбий жир
+                    - generic [ref=e154] [cursor=pointer]: Минералы + Поливитамины
+                    - generic [ref=e159] [cursor=pointer]: Расторопша
+                    - generic [ref=e164] [cursor=pointer]: Витамин D + Кальций
+                    - generic [ref=e169] [cursor=pointer]: Витамин C
+                    - generic [ref=e174] [cursor=pointer]: Витамин E + Рыбий жир
+                  - button "Показать еще" [ref=e175] [cursor=pointer]
+              - generic [ref=e177]:
+                - generic [ref=e178]: Форма выпуска
+                - generic [ref=e179]:
+                  - generic [ref=e180]:
+                    - generic [ref=e185] [cursor=pointer]: Капсулы
+                    - generic [ref=e190] [cursor=pointer]: Таблетки
+                    - generic [ref=e195] [cursor=pointer]: Чай
+                    - generic [ref=e200] [cursor=pointer]: Порошок
+                    - generic [ref=e205] [cursor=pointer]: Пастилки
+                    - generic [ref=e210] [cursor=pointer]: Сироп
+                  - button "Показать еще" [ref=e211] [cursor=pointer]
+              - generic [ref=e213]:
+                - generic [ref=e214]: Дозировка
+                - generic [ref=e215]:
+                  - generic [ref=e216]:
+                    - generic [ref=e221] [cursor=pointer]: 500 мг
+                    - generic [ref=e226] [cursor=pointer]: 400 мг
+                    - generic [ref=e231] [cursor=pointer]: 100 мг
+                    - generic [ref=e236] [cursor=pointer]: 1000 мг
+                    - generic [ref=e241] [cursor=pointer]: 300 мг
+                    - generic [ref=e246] [cursor=pointer]: 600 мг
+                  - button "Показать еще" [ref=e247] [cursor=pointer]
+              - generic [ref=e249]:
+                - generic [ref=e250]: Объем упаковки
+                - generic [ref=e251]:
+                  - generic [ref=e252]:
+                    - generic [ref=e257] [cursor=pointer]: 1.5 г
+                    - generic [ref=e262] [cursor=pointer]: 50 г
+                    - generic [ref=e267] [cursor=pointer]: 2 г
+                    - generic [ref=e272] [cursor=pointer]: 100 мл
+                    - generic [ref=e277] [cursor=pointer]: 250 мл
+                    - generic [ref=e282] [cursor=pointer]: 150 мл
+                  - button "Показать еще" [ref=e283] [cursor=pointer]
+              - generic [ref=e285]:
+                - generic [ref=e286]: Количество в упаковке
+                - generic [ref=e287]:
+                  - generic [ref=e288]:
+                    - generic [ref=e293] [cursor=pointer]: 60 шт.
+                    - generic [ref=e298] [cursor=pointer]: 30 шт.
+                    - generic [ref=e303] [cursor=pointer]: 1 шт.
+                    - generic [ref=e308] [cursor=pointer]: 20 шт.
+                    - generic [ref=e313] [cursor=pointer]: 90 шт.
+                    - generic [ref=e318] [cursor=pointer]: 100 шт.
+                  - button "Показать еще" [ref=e319] [cursor=pointer]
+              - generic [ref=e321]:
+                - generic [ref=e322]: Производитель
+                - generic [ref=e323]:
+                  - generic [ref=e324]:
+                    - generic [ref=e329] [cursor=pointer]: Внешторг Фарма
+                    - generic [ref=e334] [cursor=pointer]: Эвалар
+                    - generic [ref=e339] [cursor=pointer]: Квадрат-С
+                    - generic [ref=e344] [cursor=pointer]: Green Side
+                    - generic [ref=e349] [cursor=pointer]: Мирролла
+                    - generic [ref=e354] [cursor=pointer]: Полярис
+                  - button "Показать еще" [ref=e355] [cursor=pointer]
+              - generic [ref=e357]:
+                - generic [ref=e358]: Страна
+                - generic [ref=e359]:
+                  - generic [ref=e360]:
+                    - generic [ref=e365] [cursor=pointer]: Россия
+                    - generic [ref=e370] [cursor=pointer]: США
+                    - generic [ref=e375] [cursor=pointer]: Германия
+                    - generic [ref=e380] [cursor=pointer]: Индия
+                    - generic [ref=e385] [cursor=pointer]: Великобритания
+                    - generic [ref=e390] [cursor=pointer]: Беларусь
+                  - button "Показать еще" [ref=e391] [cursor=pointer]
+          - generic [ref=e392]:
+            - generic [ref=e1446]:
+              - paragraph [ref=e1447]:
+                - generic [ref=e1448]: Вернем 400 ₽ за первый заказ на сумму от 1 200 ₽
+                - button "Подробнее" [ref=e1449] [cursor=pointer]
+              - img [ref=e1451]
+            - generic [ref=e394]:
+              - generic [ref=e395]:
+                - generic [ref=e397]:
+                  - button "По наличию" [ref=e398] [cursor=pointer]
+                  - button "По цене" [ref=e399] [cursor=pointer]:
+                    - text: По цене
+                    - img [ref=e401]
+                - generic [ref=e403]:
+                  - button [ref=e404] [cursor=pointer]:
+                    - img [ref=e406]
+                  - button [ref=e408] [cursor=pointer]:
+                    - img [ref=e410]
+              - generic [ref=e416]:
+                - article [ref=e418]:
+                  - button [ref=e421] [cursor=pointer]:
+                    - img [ref=e423]
+                  - generic [ref=e425]:
+                    - link "Бак-Сет Беби, порошок для приема внутрь, 1 г, 10 шт. фото" [ref=e1453] [cursor=pointer]:
+                      - /url: /omsk/products/bak-set-bebi-poroshok-dlya-priema-vnutr-1-g-10-sht-88908
+                      - img "Бак-Сет Беби, порошок для приема внутрь, 1 г, 10 шт. фото" [ref=e429]
+                    - generic [ref=e431]:
+                      - generic [ref=e432]:
+                        - heading "Бак-Сет Беби, порошок для приема внутрь, 1 г, 10 шт." [level=3] [ref=e433]:
+                          - link "Бак-Сет Беби, порошок для приема внутрь, 1 г, 10 шт." [ref=e1454] [cursor=pointer]:
+                            - /url: /omsk/products/bak-set-bebi-poroshok-dlya-priema-vnutr-1-g-10-sht-88908
+                        - generic [ref=e435]:
+                          - generic [ref=e436]: "Действующее вещество:"
+                          - link "Синбиотик" [ref=e1455] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%A1%D0%B8%D0%BD%D0%B1%D0%B8%D0%BE%D1%82%D0%B8%D0%BA%22
+                        - generic [ref=e438]:
+                          - generic [ref=e439]: "Производитель:"
+                          - paragraph [ref=e440]: Фармамед, Великобритания
+                      - generic [ref=e441]:
+                        - generic [ref=e442]:
+                          - generic [ref=e443]:
+                            - generic [ref=e444]: от 637.80 ₽
+                            - generic [ref=e445]: от 637.80 ₽ до 990.00 ₽
+                          - button "В корзину" [ref=e448] [cursor=pointer]:
+                            - generic [ref=e449]: В корзину
+                        - generic [ref=e450]:
+                          - generic [ref=e451]: Доступно сегодня
+                          - link "в 57 аптеках" [ref=e1456] [cursor=pointer]:
+                            - /url: /omsk/products/bak-set-bebi-poroshok-dlya-priema-vnutr-1-g-10-sht-88908#offers
+                - article [ref=e454]:
+                  - button [ref=e457] [cursor=pointer]:
+                    - img [ref=e459]
+                  - generic [ref=e461]:
+                    - link "Аципол Малыш для детей 0+, капли, 4.5мл, 1 шт, пробиотик от колик фото" [ref=e1457] [cursor=pointer]:
+                      - /url: /omsk/products/atsipol-malysh-dlya-detey-0-kapli-4-5ml-1-sht-probiotik-ot-kolik-87493
+                      - img "Аципол Малыш для детей 0+, капли, 4.5мл, 1 шт, пробиотик от колик фото" [ref=e465]
+                    - generic [ref=e467]:
+                      - generic [ref=e468]:
+                        - heading "Аципол Малыш для детей 0+, капли, 4.5мл, 1 шт, пробиотик от колик" [level=3] [ref=e469]:
+                          - link "Аципол Малыш для детей 0+, капли, 4.5мл, 1 шт, пробиотик от колик" [ref=e1458] [cursor=pointer]:
+                            - /url: /omsk/products/atsipol-malysh-dlya-detey-0-kapli-4-5ml-1-sht-probiotik-ot-kolik-87493
+                        - generic [ref=e471]:
+                          - generic [ref=e472]: "Действующее вещество:"
+                          - link "Лактобактерии" [ref=e1459] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9B%D0%B0%D0%BA%D1%82%D0%BE%D0%B1%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D0%B8%22
+                        - generic [ref=e474]:
+                          - generic [ref=e475]: "Производитель:"
+                          - paragraph [ref=e476]: OTC Pharm, Испания
+                      - generic [ref=e477]:
+                        - generic [ref=e478]:
+                          - generic [ref=e479]:
+                            - generic [ref=e480]: от 610.80 ₽
+                            - generic [ref=e481]: от 610.80 ₽ до 1 049.20 ₽
+                          - button "В корзину" [ref=e484] [cursor=pointer]:
+                            - generic [ref=e485]: В корзину
+                        - generic [ref=e486]:
+                          - generic [ref=e487]: Доступно сегодня
+                          - link "в 56 аптеках" [ref=e1460] [cursor=pointer]:
+                            - /url: /omsk/products/atsipol-malysh-dlya-detey-0-kapli-4-5ml-1-sht-probiotik-ot-kolik-87493#offers
+                - article [ref=e490]:
+                  - button [ref=e493] [cursor=pointer]:
+                    - img [ref=e495]
+                  - generic [ref=e497]:
+                    - link "Флориоза, порошок для приема внутрь, 1.7 г, 10 шт. фото" [ref=e1461] [cursor=pointer]:
+                      - /url: /omsk/products/florioza-poroshok-dlya-priema-vnutr-1-7-g-10-sht-97262
+                      - img "Флориоза, порошок для приема внутрь, 1.7 г, 10 шт. фото" [ref=e501]
+                    - generic [ref=e503]:
+                      - generic [ref=e504]:
+                        - heading "Флориоза, порошок для приема внутрь, 1.7 г, 10 шт." [level=3] [ref=e505]:
+                          - link "Флориоза, порошок для приема внутрь, 1.7 г, 10 шт." [ref=e1462] [cursor=pointer]:
+                            - /url: /omsk/products/florioza-poroshok-dlya-priema-vnutr-1-7-g-10-sht-97262
+                        - generic [ref=e507]:
+                          - generic [ref=e508]: "Действующее вещество:"
+                          - link "Синбиотик" [ref=e1463] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%A1%D0%B8%D0%BD%D0%B1%D0%B8%D0%BE%D1%82%D0%B8%D0%BA%22
+                        - generic [ref=e510]:
+                          - generic [ref=e511]: "Производитель:"
+                          - paragraph [ref=e512]: Farmaceutici Procemsa, Италия
+                      - generic [ref=e513]:
+                        - generic [ref=e514]:
+                          - generic [ref=e515]:
+                            - generic [ref=e516]: от 602.70 ₽
+                            - generic [ref=e517]: от 602.70 ₽ до 995.00 ₽
+                          - button "В корзину" [ref=e520] [cursor=pointer]:
+                            - generic [ref=e521]: В корзину
+                        - generic [ref=e522]:
+                          - generic [ref=e523]: Доступно сегодня
+                          - link "в 56 аптеках" [ref=e1464] [cursor=pointer]:
+                            - /url: /omsk/products/florioza-poroshok-dlya-priema-vnutr-1-7-g-10-sht-97262#offers
+                - article [ref=e526]:
+                  - button [ref=e529] [cursor=pointer]:
+                    - img [ref=e531]
+                  - generic [ref=e533]:
+                    - link "Детримакс бэби, раствор для приема внутрь, 30 мл, 1 шт. фото" [ref=e1465] [cursor=pointer]:
+                      - /url: /omsk/products/detrimaks-bebi-rastvor-dlya-priema-vnutr-30-ml-1-sht-85028
+                      - img "Детримакс бэби, раствор для приема внутрь, 30 мл, 1 шт. фото" [ref=e537]
+                    - generic [ref=e539]:
+                      - generic [ref=e540]:
+                        - heading "Детримакс бэби, раствор для приема внутрь, 30 мл, 1 шт." [level=3] [ref=e541]:
+                          - link "Детримакс бэби, раствор для приема внутрь, 30 мл, 1 шт." [ref=e1466] [cursor=pointer]:
+                            - /url: /omsk/products/detrimaks-bebi-rastvor-dlya-priema-vnutr-30-ml-1-sht-85028
+                        - generic [ref=e543]:
+                          - generic [ref=e544]: "Действующее вещество:"
+                          - link "Колекальциферол" [ref=e1467] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9A%D0%BE%D0%BB%D0%B5%D0%BA%D0%B0%D0%BB%D1%8C%D1%86%D0%B8%D1%84%D0%B5%D1%80%D0%BE%D0%BB%22
+                        - generic [ref=e546]:
+                          - generic [ref=e547]: "Производитель:"
+                          - paragraph [ref=e548]: Curtis Health Caps, Польша
+                      - generic [ref=e549]:
+                        - generic [ref=e550]:
+                          - generic [ref=e551]:
+                            - generic [ref=e552]: от 582.20 ₽
+                            - generic [ref=e553]: от 582.20 ₽ до 670.60 ₽
+                          - button "В корзину" [ref=e556] [cursor=pointer]:
+                            - generic [ref=e557]: В корзину
+                        - generic [ref=e558]:
+                          - generic [ref=e559]: Доступно сегодня
+                          - link "в 55 аптеках" [ref=e1468] [cursor=pointer]:
+                            - /url: /omsk/products/detrimaks-bebi-rastvor-dlya-priema-vnutr-30-ml-1-sht-85028#offers
+                - article [ref=e562]:
+                  - button [ref=e565] [cursor=pointer]:
+                    - img [ref=e567]
+                  - generic [ref=e569]:
+                    - link "Осины кора, фиточай, 50 г, 1 шт. фото" [ref=e1469] [cursor=pointer]:
+                      - /url: /omsk/products/osiny-kora-fitochay-50-g-1-sht-62122
+                      - img "Осины кора, фиточай, 50 г, 1 шт. фото" [ref=e573]
+                    - generic [ref=e575]:
+                      - generic [ref=e576]:
+                        - heading "Осины кора, фиточай, 50 г, 1 шт." [level=3] [ref=e577]:
+                          - link "Осины кора, фиточай, 50 г, 1 шт." [ref=e1470] [cursor=pointer]:
+                            - /url: /omsk/products/osiny-kora-fitochay-50-g-1-sht-62122
+                        - generic [ref=e579]:
+                          - generic [ref=e580]: "Действующее вещество:"
+                          - link "Осина" [ref=e1471] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9E%D1%81%D0%B8%D0%BD%D0%B0%22
+                        - generic [ref=e582]:
+                          - generic [ref=e583]: "Производитель:"
+                          - paragraph [ref=e584]: Фармгрупп, Россия
+                      - generic [ref=e585]:
+                        - generic [ref=e586]:
+                          - generic [ref=e587]:
+                            - generic [ref=e588]: от 52.00 ₽
+                            - generic [ref=e589]: от 52.00 ₽ до 122.00 ₽
+                          - button "В корзину" [ref=e592] [cursor=pointer]:
+                            - generic [ref=e593]: В корзину
+                        - generic [ref=e594]:
+                          - generic [ref=e595]: Доступно сегодня
+                          - link "в 52 аптеках" [ref=e1472] [cursor=pointer]:
+                            - /url: /omsk/products/osiny-kora-fitochay-50-g-1-sht-62122#offers
+                - article [ref=e598]:
+                  - generic [ref=e599]:
+                    - generic [ref=e601] [cursor=pointer]:
+                      - generic [ref=e602]:
+                        - img [ref=e604]
+                        - generic [ref=e606]: EXPERO
+                      - img [ref=e608]
+                    - button [ref=e611] [cursor=pointer]:
+                      - img [ref=e613]
+                  - generic [ref=e615]:
+                    - link "Пиковит, сироп для детей, 150 мл, 1 шт. фото" [ref=e1473] [cursor=pointer]:
+                      - /url: /omsk/products/pikovit-sirop-dlya-detey-150-ml-1-sht-65837
+                      - img "Пиковит, сироп для детей, 150 мл, 1 шт. фото" [ref=e619]
+                    - generic [ref=e621]:
+                      - generic [ref=e622]:
+                        - heading "Пиковит, сироп для детей, 150 мл, 1 шт." [level=3] [ref=e623]:
+                          - link "Пиковит, сироп для детей, 150 мл, 1 шт." [ref=e1474] [cursor=pointer]:
+                            - /url: /omsk/products/pikovit-sirop-dlya-detey-150-ml-1-sht-65837
+                        - generic [ref=e625]:
+                          - generic [ref=e626]: "Действующее вещество:"
+                          - link "Поливитамины" [ref=e1475] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9F%D0%BE%D0%BB%D0%B8%D0%B2%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD%D1%8B%22
+                        - generic [ref=e628]:
+                          - generic [ref=e629]: "Производитель:"
+                          - paragraph [ref=e630]: KRKA, Словения
+                      - generic [ref=e631]:
+                        - generic [ref=e632]:
+                          - generic [ref=e633]:
+                            - generic [ref=e634]: от 626.80 ₽
+                            - generic [ref=e635]: от 626.80 ₽ до 786.50 ₽
+                          - button "В корзину" [ref=e638] [cursor=pointer]:
+                            - generic [ref=e639]: В корзину
+                        - generic [ref=e640]:
+                          - generic [ref=e641]: Доступно сегодня
+                          - link "в 51 аптеке" [ref=e1476] [cursor=pointer]:
+                            - /url: /omsk/products/pikovit-sirop-dlya-detey-150-ml-1-sht-65837#offers
+                - article [ref=e644]:
+                  - button [ref=e647] [cursor=pointer]:
+                    - img [ref=e649]
+                  - generic [ref=e651]:
+                    - link "Пепидол Пэг для детей, 3%, раствор для приема внутрь, 100 мл, 1 шт. фото" [ref=e1477] [cursor=pointer]:
+                      - /url: /omsk/products/pepidol-peg-dlya-detey-3-rastvor-dlya-priema-vnutr-100-ml-1-sht-64788
+                      - img "Пепидол Пэг для детей, 3%, раствор для приема внутрь, 100 мл, 1 шт. фото" [ref=e655]
+                    - generic [ref=e657]:
+                      - generic [ref=e658]:
+                        - heading "Пепидол Пэг для детей, 3%, раствор для приема внутрь, 100 мл, 1 шт." [level=3] [ref=e659]:
+                          - link "Пепидол Пэг для детей, 3%, раствор для приема внутрь, 100 мл, 1 шт." [ref=e1478] [cursor=pointer]:
+                            - /url: /omsk/products/pepidol-peg-dlya-detey-3-rastvor-dlya-priema-vnutr-100-ml-1-sht-64788
+                        - generic [ref=e661]:
+                          - generic [ref=e662]: "Действующее вещество:"
+                          - link "Пектин" [ref=e1479] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9F%D0%B5%D0%BA%D1%82%D0%B8%D0%BD%22
+                        - generic [ref=e664]:
+                          - generic [ref=e665]: "Производитель:"
+                          - paragraph [ref=e666]: Элюсан НПЦ, Россия
+                      - generic [ref=e667]:
+                        - generic [ref=e668]:
+                          - generic [ref=e669]:
+                            - generic [ref=e670]: от 210.60 ₽
+                            - generic [ref=e671]: от 210.60 ₽ до 385.00 ₽
+                          - button "В корзину" [ref=e674] [cursor=pointer]:
+                            - generic [ref=e675]: В корзину
+                        - generic [ref=e676]:
+                          - generic [ref=e677]: Доступно сегодня
+                          - link "в 51 аптеке" [ref=e1480] [cursor=pointer]:
+                            - /url: /omsk/products/pepidol-peg-dlya-detey-3-rastvor-dlya-priema-vnutr-100-ml-1-sht-64788#offers
+                - article [ref=e680]:
+                  - button [ref=e683] [cursor=pointer]:
+                    - img [ref=e685]
+                  - generic [ref=e687]:
+                    - link "Пепидол Пэг, 5%, раствор водный, 250 мл, 1 шт. фото" [ref=e1481] [cursor=pointer]:
+                      - /url: /omsk/products/pepidol-peg-5-rastvor-vodnyy-250-ml-1-sht-64782
+                      - img "Пепидол Пэг, 5%, раствор водный, 250 мл, 1 шт. фото" [ref=e691]
+                    - generic [ref=e693]:
+                      - generic [ref=e694]:
+                        - heading "Пепидол Пэг, 5%, раствор водный, 250 мл, 1 шт." [level=3] [ref=e695]:
+                          - link "Пепидол Пэг, 5%, раствор водный, 250 мл, 1 шт." [ref=e1482] [cursor=pointer]:
+                            - /url: /omsk/products/pepidol-peg-5-rastvor-vodnyy-250-ml-1-sht-64782
+                        - generic [ref=e697]:
+                          - generic [ref=e698]: "Действующее вещество:"
+                          - link "Пектин" [ref=e1483] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9F%D0%B5%D0%BA%D1%82%D0%B8%D0%BD%22
+                        - generic [ref=e700]:
+                          - generic [ref=e701]: "Производитель:"
+                          - paragraph [ref=e702]: Элюсан НПЦ, Россия
+                      - generic [ref=e703]:
+                        - generic [ref=e704]:
+                          - generic [ref=e705]:
+                            - generic [ref=e706]: от 484.80 ₽
+                            - generic [ref=e707]: от 484.80 ₽ до 743.10 ₽
+                          - button "В корзину" [ref=e710] [cursor=pointer]:
+                            - generic [ref=e711]: В корзину
+                        - generic [ref=e712]:
+                          - generic [ref=e713]: Доступно сегодня
+                          - link "в 50 аптеках" [ref=e1484] [cursor=pointer]:
+                            - /url: /omsk/products/pepidol-peg-5-rastvor-vodnyy-250-ml-1-sht-64782#offers
+                - article [ref=e716]:
+                  - button [ref=e719] [cursor=pointer]:
+                    - img [ref=e721]
+                  - generic [ref=e723]:
+                    - link "Бифицин, капсулы, 10 шт. фото" [ref=e1485] [cursor=pointer]:
+                      - /url: /omsk/products/bifitsin-kapsuly-10-sht-89299
+                      - img "Бифицин, капсулы, 10 шт. фото" [ref=e727]
+                    - generic [ref=e729]:
+                      - generic [ref=e730]:
+                        - heading "Бифицин, капсулы, 10 шт." [level=3] [ref=e731]:
+                          - link "Бифицин, капсулы, 10 шт." [ref=e1486] [cursor=pointer]:
+                            - /url: /omsk/products/bifitsin-kapsuly-10-sht-89299
+                        - generic [ref=e733]:
+                          - generic [ref=e734]: "Действующее вещество:"
+                          - link "Синбиотик" [ref=e1487] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%A1%D0%B8%D0%BD%D0%B1%D0%B8%D0%BE%D1%82%D0%B8%D0%BA%22
+                        - generic [ref=e736]:
+                          - generic [ref=e737]: "Производитель:"
+                          - paragraph [ref=e738]: Ерс'с Криэйшн ЮЭсЭй, США
+                      - generic [ref=e739]:
+                        - generic [ref=e740]:
+                          - generic [ref=e741]:
+                            - generic [ref=e742]: от 649.00 ₽
+                            - generic [ref=e743]: от 649.00 ₽ до 690.00 ₽
+                          - button "В корзину" [ref=e746] [cursor=pointer]:
+                            - generic [ref=e747]: В корзину
+                        - generic [ref=e748]:
+                          - generic [ref=e749]: Доступно сегодня
+                          - link "в 50 аптеках" [ref=e1488] [cursor=pointer]:
+                            - /url: /omsk/products/bifitsin-kapsuly-10-sht-89299#offers
+                - article [ref=e752]:
+                  - button [ref=e755] [cursor=pointer]:
+                    - img [ref=e757]
+                  - generic [ref=e759]:
+                    - link "Консумед Витамины для подростков 12-16 лет, таблетки шипучие для детей, 18 шт, лайм фото" [ref=e1489] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-vitaminy-dlya-podrostkov-12-16-let-tabletki-shipuchie-dlya-detey-18-sht-laym-228974
+                      - img "Консумед Витамины для подростков 12-16 лет, таблетки шипучие для детей, 18 шт, лайм фото" [ref=e763]
+                    - generic [ref=e765]:
+                      - generic [ref=e766]:
+                        - heading "Консумед Витамины для подростков 12-16 лет, таблетки шипучие для детей, 18 шт, лайм" [level=3] [ref=e767]:
+                          - link "Консумед Витамины для подростков 12-16 лет, таблетки шипучие для детей, 18 шт, лайм" [ref=e1490] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-vitaminy-dlya-podrostkov-12-16-let-tabletki-shipuchie-dlya-detey-18-sht-laym-228974
+                        - generic [ref=e769]:
+                          - generic [ref=e770]: "Действующее вещество:"
+                          - link "Поливитамины" [ref=e1491] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9F%D0%BE%D0%BB%D0%B8%D0%B2%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD%D1%8B%22
+                        - generic [ref=e772]:
+                          - generic [ref=e773]: "Производитель:"
+                          - paragraph [ref=e774]: МалКут НП, Беларусь
+                      - generic [ref=e775]:
+                        - generic [ref=e776]:
+                          - generic [ref=e778]: 325.00 ₽
+                          - button "В корзину" [ref=e781] [cursor=pointer]:
+                            - generic [ref=e782]: В корзину
+                        - generic [ref=e783]:
+                          - generic [ref=e784]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1492] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-vitaminy-dlya-podrostkov-12-16-let-tabletki-shipuchie-dlya-detey-18-sht-laym-228974#offers
+                - article [ref=e787]:
+                  - button [ref=e790] [cursor=pointer]:
+                    - img [ref=e792]
+                  - generic [ref=e794]:
+                    - link "Крапивы листья, сырье растительное, 1.5 г, 20 шт. фото" [ref=e1493] [cursor=pointer]:
+                      - /url: /omsk/products/krapivy-listya-syre-rastitelnoe-1-5-g-20-sht-243178
+                      - img "Крапивы листья, сырье растительное, 1.5 г, 20 шт. фото" [ref=e798]
+                    - generic [ref=e800]:
+                      - generic [ref=e801]:
+                        - heading "Крапивы листья, сырье растительное, 1.5 г, 20 шт." [level=3] [ref=e802]:
+                          - link "Крапивы листья, сырье растительное, 1.5 г, 20 шт." [ref=e1494] [cursor=pointer]:
+                            - /url: /omsk/products/krapivy-listya-syre-rastitelnoe-1-5-g-20-sht-243178
+                        - generic [ref=e804]:
+                          - generic [ref=e805]: "Действующее вещество:"
+                          - link "Крапива" [ref=e1495] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9A%D1%80%D0%B0%D0%BF%D0%B8%D0%B2%D0%B0%22
+                        - generic [ref=e807]:
+                          - generic [ref=e808]: "Производитель:"
+                          - paragraph [ref=e809]: СТ-Медифарм, Россия
+                      - generic [ref=e810]:
+                        - generic [ref=e811]:
+                          - generic [ref=e813]: 108.00 ₽
+                          - button "В корзину" [ref=e816] [cursor=pointer]:
+                            - generic [ref=e817]: В корзину
+                        - generic [ref=e818]:
+                          - generic [ref=e819]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1496] [cursor=pointer]:
+                            - /url: /omsk/products/krapivy-listya-syre-rastitelnoe-1-5-g-20-sht-243178#offers
+                - article [ref=e822]:
+                  - button [ref=e825] [cursor=pointer]:
+                    - img [ref=e827]
+                  - generic [ref=e829]:
+                    - link "Консумед Гинкго Билоба с глицином и витамином B6, 40 мг, таблетки, 90 шт. фото" [ref=e1497] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-ginkgo-biloba-s-glitsinom-i-vitaminom-b6-40-mg-tabletki-90-sht-108511
+                      - img "Консумед Гинкго Билоба с глицином и витамином B6, 40 мг, таблетки, 90 шт. фото" [ref=e833]
+                    - generic [ref=e835]:
+                      - generic [ref=e836]:
+                        - heading "Консумед Гинкго Билоба с глицином и витамином B6, 40 мг, таблетки, 90 шт." [level=3] [ref=e837]:
+                          - link "Консумед Гинкго Билоба с глицином и витамином B6, 40 мг, таблетки, 90 шт." [ref=e1498] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-ginkgo-biloba-s-glitsinom-i-vitaminom-b6-40-mg-tabletki-90-sht-108511
+                        - generic [ref=e839]:
+                          - generic [ref=e840]: "Действующее вещество:"
+                          - link "Гинкго Билоба" [ref=e1499] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%93%D0%B8%D0%BD%D0%BA%D0%B3%D0%BE%20%D0%91%D0%B8%D0%BB%D0%BE%D0%B1%D0%B0%22
+                        - generic [ref=e842]:
+                          - generic [ref=e843]: "Производитель:"
+                          - paragraph [ref=e844]: Биотерра, Беларусь
+                      - generic [ref=e845]:
+                        - generic [ref=e846]:
+                          - generic [ref=e848]: 569.00 ₽
+                          - button "В корзину" [ref=e851] [cursor=pointer]:
+                            - generic [ref=e852]: В корзину
+                        - generic [ref=e853]:
+                          - generic [ref=e854]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1500] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-ginkgo-biloba-s-glitsinom-i-vitaminom-b6-40-mg-tabletki-90-sht-108511#offers
+                - article [ref=e857]:
+                  - button [ref=e860] [cursor=pointer]:
+                    - img [ref=e862]
+                  - generic [ref=e864]:
+                    - link "Консумед Омега-3 90%, капсулы, 30 шт. фото" [ref=e1501] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-omega-3-90-kapsuly-30-sht-234463
+                      - img "Консумед Омега-3 90%, капсулы, 30 шт. фото" [ref=e868]
+                    - generic [ref=e870]:
+                      - generic [ref=e871]:
+                        - heading "Консумед Омега-3 90%, капсулы, 30 шт." [level=3] [ref=e872]:
+                          - link "Консумед Омега-3 90%, капсулы, 30 шт." [ref=e1502] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-omega-3-90-kapsuly-30-sht-234463
+                        - generic [ref=e874]:
+                          - generic [ref=e875]: "Действующее вещество:"
+                          - link "Рыбий жир" [ref=e1503] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%A0%D1%8B%D0%B1%D0%B8%D0%B9%20%D0%B6%D0%B8%D1%80%22
+                        - generic [ref=e877]:
+                          - generic [ref=e878]: "Производитель:"
+                          - paragraph [ref=e879]: Полярис, Россия
+                      - generic [ref=e880]:
+                        - generic [ref=e881]:
+                          - generic [ref=e883]: 1 299.00 ₽
+                          - button "В корзину" [ref=e886] [cursor=pointer]:
+                            - generic [ref=e887]: В корзину
+                        - generic [ref=e888]:
+                          - generic [ref=e889]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1504] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-omega-3-90-kapsuly-30-sht-234463#offers
+                - article [ref=e892]:
+                  - generic [ref=e893]:
+                    - generic [ref=e895] [cursor=pointer]:
+                      - generic [ref=e896]:
+                        - img [ref=e898]
+                        - generic [ref=e900]: EXPERO
+                      - img [ref=e902]
+                    - button [ref=e905] [cursor=pointer]:
+                      - img [ref=e907]
+                  - generic [ref=e909]:
+                    - link "Консумед Омега-3 35% для взрослых, детей с 11 лет, беременных, капсулы, 30 шт. фото" [ref=e1505] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-omega-3-35-dlya-vzroslykh-detey-s-11-let-beremennykh-kapsuly-30-sht-243662
+                      - img "Консумед Омега-3 35% для взрослых, детей с 11 лет, беременных, капсулы, 30 шт. фото" [ref=e913]
+                    - generic [ref=e915]:
+                      - generic [ref=e916]:
+                        - heading "Консумед Омега-3 35% для взрослых, детей с 11 лет, беременных, капсулы, 30 шт." [level=3] [ref=e917]:
+                          - link "Консумед Омега-3 35% для взрослых, детей с 11 лет, беременных, капсулы, 30 шт." [ref=e1506] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-omega-3-35-dlya-vzroslykh-detey-s-11-let-beremennykh-kapsuly-30-sht-243662
+                        - generic [ref=e919]:
+                          - generic [ref=e920]: "Действующее вещество:"
+                          - link "Рыбий жир" [ref=e1507] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%A0%D1%8B%D0%B1%D0%B8%D0%B9%20%D0%B6%D0%B8%D1%80%22
+                        - generic [ref=e922]:
+                          - generic [ref=e923]: "Производитель:"
+                          - paragraph [ref=e924]: Мирролла, Россия
+                      - generic [ref=e925]:
+                        - generic [ref=e926]:
+                          - generic [ref=e928]: 435.00 ₽
+                          - button "В корзину" [ref=e931] [cursor=pointer]:
+                            - generic [ref=e932]: В корзину
+                        - generic [ref=e933]:
+                          - generic [ref=e934]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1508] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-omega-3-35-dlya-vzroslykh-detey-s-11-let-beremennykh-kapsuly-30-sht-243662#offers
+                - article [ref=e937]:
+                  - button [ref=e940] [cursor=pointer]:
+                    - img [ref=e942]
+                  - generic [ref=e944]:
+                    - link "Консумед Глицин, 100 мг, таблетки подъязычные, 100 шт. фото" [ref=e1509] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-glitsin-100-mg-tabletki-podyazychnye-100-sht-108510
+                      - img "Консумед Глицин, 100 мг, таблетки подъязычные, 100 шт. фото" [ref=e948]
+                    - generic [ref=e950]:
+                      - generic [ref=e951]:
+                        - heading "Консумед Глицин, 100 мг, таблетки подъязычные, 100 шт." [level=3] [ref=e952]:
+                          - link "Консумед Глицин, 100 мг, таблетки подъязычные, 100 шт." [ref=e1510] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-glitsin-100-mg-tabletki-podyazychnye-100-sht-108510
+                        - generic [ref=e954]:
+                          - generic [ref=e955]: "Действующее вещество:"
+                          - link "Глицин" [ref=e1511] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%93%D0%BB%D0%B8%D1%86%D0%B8%D0%BD%22
+                        - generic [ref=e957]:
+                          - generic [ref=e958]: "Производитель:"
+                          - paragraph [ref=e959]: Внешторг Фарма, Россия
+                      - generic [ref=e960]:
+                        - generic [ref=e961]:
+                          - generic [ref=e963]: 119.00 ₽
+                          - button "В корзину" [ref=e966] [cursor=pointer]:
+                            - generic [ref=e967]: В корзину
+                        - generic [ref=e968]:
+                          - generic [ref=e969]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1512] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-glitsin-100-mg-tabletki-podyazychnye-100-sht-108510#offers
+                - article [ref=e972]:
+                  - button [ref=e975] [cursor=pointer]:
+                    - img [ref=e977]
+                  - generic [ref=e979]:
+                    - link "Боровая матка, сырье растительное измельченное, 1.5 г, 20 шт. фото" [ref=e1513] [cursor=pointer]:
+                      - /url: /omsk/products/borovaya-matka-syre-rastitelnoe-izmelchennoe-1-5-g-20-sht-74606
+                      - img "Боровая матка, сырье растительное измельченное, 1.5 г, 20 шт. фото" [ref=e983]
+                    - generic [ref=e985]:
+                      - generic [ref=e986]:
+                        - heading "Боровая матка, сырье растительное измельченное, 1.5 г, 20 шт." [level=3] [ref=e987]:
+                          - link "Боровая матка, сырье растительное измельченное, 1.5 г, 20 шт." [ref=e1514] [cursor=pointer]:
+                            - /url: /omsk/products/borovaya-matka-syre-rastitelnoe-izmelchennoe-1-5-g-20-sht-74606
+                        - generic [ref=e989]:
+                          - generic [ref=e990]: "Действующее вещество:"
+                          - link "Ортилия однобокая" [ref=e1515] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9E%D1%80%D1%82%D0%B8%D0%BB%D0%B8%D1%8F%20%D0%BE%D0%B4%D0%BD%D0%BE%D0%B1%D0%BE%D0%BA%D0%B0%D1%8F%22
+                        - generic [ref=e992]:
+                          - generic [ref=e993]: "Производитель:"
+                          - paragraph [ref=e994]: Хербес, Россия
+                      - generic [ref=e995]:
+                        - generic [ref=e996]:
+                          - generic [ref=e998]: 259.00 ₽
+                          - button "В корзину" [ref=e1001] [cursor=pointer]:
+                            - generic [ref=e1002]: В корзину
+                        - generic [ref=e1003]:
+                          - generic [ref=e1004]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1516] [cursor=pointer]:
+                            - /url: /omsk/products/borovaya-matka-syre-rastitelnoe-izmelchennoe-1-5-g-20-sht-74606#offers
+                - article [ref=e1007]:
+                  - button [ref=e1010] [cursor=pointer]:
+                    - img [ref=e1012]
+                  - generic [ref=e1014]:
+                    - link "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 17 г, 1 шт, вишня фото" [ref=e1517] [cursor=pointer]:
+                      - /url: /omsk/products/karamel-ledentsovaya-petushok-na-palochke-vitamin-s-karamel-ledentsovaya-17-g-1-sht-vishnya-91469
+                      - img "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 17 г, 1 шт, вишня фото" [ref=e1018]
+                    - generic [ref=e1020]:
+                      - generic [ref=e1021]:
+                        - heading "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 17 г, 1 шт, вишня" [level=3] [ref=e1022]:
+                          - link "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 17 г, 1 шт, вишня" [ref=e1518] [cursor=pointer]:
+                            - /url: /omsk/products/karamel-ledentsovaya-petushok-na-palochke-vitamin-s-karamel-ledentsovaya-17-g-1-sht-vishnya-91469
+                        - generic [ref=e1024]:
+                          - generic [ref=e1025]: "Действующее вещество:"
+                          - link "Витамин C" [ref=e1519] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%92%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD%20C%22
+                        - generic [ref=e1027]:
+                          - generic [ref=e1028]: "Производитель:"
+                          - paragraph [ref=e1029]: Гуслица, Россия
+                      - generic [ref=e1030]:
+                        - generic [ref=e1031]:
+                          - generic [ref=e1033]: 47.00 ₽
+                          - button "В корзину" [ref=e1036] [cursor=pointer]:
+                            - generic [ref=e1037]: В корзину
+                        - generic [ref=e1038]:
+                          - generic [ref=e1039]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1520] [cursor=pointer]:
+                            - /url: /omsk/products/karamel-ledentsovaya-petushok-na-palochke-vitamin-s-karamel-ledentsovaya-17-g-1-sht-vishnya-91469#offers
+                - article [ref=e1042]:
+                  - button [ref=e1045] [cursor=pointer]:
+                    - img [ref=e1047]
+                  - generic [ref=e1049]:
+                    - link "Консумед Фолиевая кислота, 0.5 мг, таблетки, 50 шт. фото" [ref=e1521] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-folievaya-kislota-0-5-mg-tabletki-50-sht-108524
+                      - img "Консумед Фолиевая кислота, 0.5 мг, таблетки, 50 шт. фото" [ref=e1053]
+                    - generic [ref=e1055]:
+                      - generic [ref=e1056]:
+                        - heading "Консумед Фолиевая кислота, 0.5 мг, таблетки, 50 шт." [level=3] [ref=e1057]:
+                          - link "Консумед Фолиевая кислота, 0.5 мг, таблетки, 50 шт." [ref=e1522] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-folievaya-kislota-0-5-mg-tabletki-50-sht-108524
+                        - generic [ref=e1059]:
+                          - generic [ref=e1060]: "Действующее вещество:"
+                          - link "Витамин B9" [ref=e1523] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%92%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD%20B9%22
+                        - generic [ref=e1062]:
+                          - generic [ref=e1063]: "Производитель:"
+                          - paragraph [ref=e1064]: Внешторг Фарма, Россия
+                      - generic [ref=e1065]:
+                        - generic [ref=e1066]:
+                          - generic [ref=e1068]: 79.00 ₽
+                          - button "В корзину" [ref=e1071] [cursor=pointer]:
+                            - generic [ref=e1072]: В корзину
+                        - generic [ref=e1073]:
+                          - generic [ref=e1074]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1524] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-folievaya-kislota-0-5-mg-tabletki-50-sht-108524#offers
+                - article [ref=e1077]:
+                  - button [ref=e1080] [cursor=pointer]:
+                    - img [ref=e1082]
+                  - generic [ref=e1084]:
+                    - link "Консумед Эвкалипт, таблетки для рассасывания, 20 шт. фото" [ref=e1525] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-evkalipt-tabletki-dlya-rassasyvaniya-20-sht-108517
+                      - img "Консумед Эвкалипт, таблетки для рассасывания, 20 шт. фото" [ref=e1088]
+                    - generic [ref=e1090]:
+                      - generic [ref=e1091]:
+                        - heading "Консумед Эвкалипт, таблетки для рассасывания, 20 шт." [level=3] [ref=e1092]:
+                          - link "Консумед Эвкалипт, таблетки для рассасывания, 20 шт." [ref=e1526] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-evkalipt-tabletki-dlya-rassasyvaniya-20-sht-108517
+                        - generic [ref=e1094]:
+                          - generic [ref=e1095]: "Действующее вещество:"
+                          - link "Эвкалипт" [ref=e1527] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%AD%D0%B2%D0%BA%D0%B0%D0%BB%D0%B8%D0%BF%D1%82%22
+                        - generic [ref=e1097]:
+                          - generic [ref=e1098]: "Производитель:"
+                          - paragraph [ref=e1099]: Внешторг Фарма, Россия
+                      - generic [ref=e1100]:
+                        - generic [ref=e1101]:
+                          - generic [ref=e1103]: 243.00 ₽
+                          - button "В корзину" [ref=e1106] [cursor=pointer]:
+                            - generic [ref=e1107]: В корзину
+                        - generic [ref=e1108]:
+                          - generic [ref=e1109]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1528] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-evkalipt-tabletki-dlya-rassasyvaniya-20-sht-108517#offers
+                - article [ref=e1112]:
+                  - button [ref=e1115] [cursor=pointer]:
+                    - img [ref=e1117]
+                  - generic [ref=e1119]:
+                    - link "Консумед Янтарная кислота Форте, 400 мг, таблетки, 30 шт. фото" [ref=e1529] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-yantarnaya-kislota-forte-400-mg-tabletki-30-sht-229265
+                      - img "Консумед Янтарная кислота Форте, 400 мг, таблетки, 30 шт. фото" [ref=e1123]
+                    - generic [ref=e1125]:
+                      - generic [ref=e1126]:
+                        - heading "Консумед Янтарная кислота Форте, 400 мг, таблетки, 30 шт." [level=3] [ref=e1127]:
+                          - link "Консумед Янтарная кислота Форте, 400 мг, таблетки, 30 шт." [ref=e1530] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-yantarnaya-kislota-forte-400-mg-tabletki-30-sht-229265
+                        - generic [ref=e1129]:
+                          - generic [ref=e1130]: "Действующее вещество:"
+                          - link "Янтарная кислота" [ref=e1531] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%AF%D0%BD%D1%82%D0%B0%D1%80%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%B8%D1%81%D0%BB%D0%BE%D1%82%D0%B0%22
+                        - generic [ref=e1132]:
+                          - generic [ref=e1133]: "Производитель:"
+                          - paragraph [ref=e1134]: Квадрат-С, Россия
+                      - generic [ref=e1135]:
+                        - generic [ref=e1136]:
+                          - generic [ref=e1138]: 185.00 ₽
+                          - button "В корзину" [ref=e1141] [cursor=pointer]:
+                            - generic [ref=e1142]: В корзину
+                        - generic [ref=e1143]:
+                          - generic [ref=e1144]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1532] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-yantarnaya-kislota-forte-400-mg-tabletki-30-sht-229265#offers
+                - article [ref=e1147]:
+                  - generic [ref=e1148]:
+                    - generic [ref=e1150] [cursor=pointer]:
+                      - generic [ref=e1151]:
+                        - img [ref=e1153]
+                        - generic [ref=e1155]: EXPERO
+                      - img [ref=e1157]
+                    - button [ref=e1160] [cursor=pointer]:
+                      - img [ref=e1162]
+                  - generic [ref=e1164]:
+                    - link "Консумед Сироп подорожника, сироп, 150 мл, 1 шт, от 3-х лет фото" [ref=e1533] [cursor=pointer]:
+                      - /url: /omsk/products/konsumed-sirop-podorozhnika-sirop-150-ml-1-sht-ot-3-kh-let-230406
+                      - img "Консумед Сироп подорожника, сироп, 150 мл, 1 шт, от 3-х лет фото" [ref=e1168]
+                    - generic [ref=e1170]:
+                      - generic [ref=e1171]:
+                        - heading "Консумед Сироп подорожника, сироп, 150 мл, 1 шт, от 3-х лет" [level=3] [ref=e1172]:
+                          - link "Консумед Сироп подорожника, сироп, 150 мл, 1 шт, от 3-х лет" [ref=e1534] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-sirop-podorozhnika-sirop-150-ml-1-sht-ot-3-kh-let-230406
+                        - generic [ref=e1174]:
+                          - generic [ref=e1175]: "Действующее вещество:"
+                          - link "Подорожник большой" [ref=e1535] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9F%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%B8%D0%BA%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9%22
+                        - generic [ref=e1177]:
+                          - generic [ref=e1178]: "Производитель:"
+                          - paragraph [ref=e1179]: Мирролла, Россия
+                      - generic [ref=e1180]:
+                        - generic [ref=e1181]:
+                          - generic [ref=e1183]: 375.00 ₽
+                          - button "В корзину" [ref=e1186] [cursor=pointer]:
+                            - generic [ref=e1187]: В корзину
+                        - generic [ref=e1188]:
+                          - generic [ref=e1189]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1536] [cursor=pointer]:
+                            - /url: /omsk/products/konsumed-sirop-podorozhnika-sirop-150-ml-1-sht-ot-3-kh-let-230406#offers
+                - article [ref=e1192]:
+                  - button [ref=e1195] [cursor=pointer]:
+                    - img [ref=e1197]
+                  - generic [ref=e1199]:
+                    - link "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 1 шт, клубника фото" [ref=e1537] [cursor=pointer]:
+                      - /url: /omsk/products/karamel-ledentsovaya-petushok-na-palochke-vitamin-s-karamel-ledentsovaya-1-sht-klubnika-91431
+                      - img "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 1 шт, клубника фото" [ref=e1203]
+                    - generic [ref=e1205]:
+                      - generic [ref=e1206]:
+                        - heading "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 1 шт, клубника" [level=3] [ref=e1207]:
+                          - link "Карамель леденцовая Петушок на палочке Витамин С, карамель леденцовая, 1 шт, клубника" [ref=e1538] [cursor=pointer]:
+                            - /url: /omsk/products/karamel-ledentsovaya-petushok-na-palochke-vitamin-s-karamel-ledentsovaya-1-sht-klubnika-91431
+                        - generic [ref=e1209]:
+                          - generic [ref=e1210]: "Действующее вещество:"
+                          - link "Витамин C" [ref=e1539] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%92%D0%B8%D1%82%D0%B0%D0%BC%D0%B8%D0%BD%20C%22
+                        - generic [ref=e1212]:
+                          - generic [ref=e1213]: "Производитель:"
+                          - paragraph [ref=e1214]: Гуслица, Россия
+                      - generic [ref=e1215]:
+                        - generic [ref=e1216]:
+                          - generic [ref=e1218]: 47.00 ₽
+                          - button "В корзину" [ref=e1221] [cursor=pointer]:
+                            - generic [ref=e1222]: В корзину
+                        - generic [ref=e1223]:
+                          - generic [ref=e1224]: Доступно сегодня
+                          - link "в 49 аптеках" [ref=e1540] [cursor=pointer]:
+                            - /url: /omsk/products/karamel-ledentsovaya-petushok-na-palochke-vitamin-s-karamel-ledentsovaya-1-sht-klubnika-91431#offers
+                - article [ref=e1227]:
+                  - button [ref=e1230] [cursor=pointer]:
+                    - img [ref=e1232]
+                  - generic [ref=e1234]:
+                    - link "Кресферум микроферменты, 10000 ЕД, капсулы, 20 шт. фото" [ref=e1541] [cursor=pointer]:
+                      - /url: /omsk/products/kresferum-mikrofermenty-10000-ed-kapsuly-20-sht-227298
+                      - img "Кресферум микроферменты, 10000 ЕД, капсулы, 20 шт. фото" [ref=e1238]
+                    - generic [ref=e1240]:
+                      - generic [ref=e1241]:
+                        - heading "Кресферум микроферменты, 10000 ЕД, капсулы, 20 шт." [level=3] [ref=e1242]:
+                          - link "Кресферум микроферменты, 10000 ЕД, капсулы, 20 шт." [ref=e1542] [cursor=pointer]:
+                            - /url: /omsk/products/kresferum-mikrofermenty-10000-ed-kapsuly-20-sht-227298
+                        - generic [ref=e1244]:
+                          - generic [ref=e1245]: "Действующее вещество:"
+                          - link "Панкреатин" [ref=e1543] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%9F%D0%B0%D0%BD%D0%BA%D1%80%D0%B5%D0%B0%D1%82%D0%B8%D0%BD%22
+                        - generic [ref=e1247]:
+                          - generic [ref=e1248]: "Производитель:"
+                          - paragraph [ref=e1249]: ООО Фармфабрика, Россия
+                      - generic [ref=e1250]:
+                        - generic [ref=e1251]:
+                          - generic [ref=e1253]: 254.00 ₽
+                          - button "В корзину" [ref=e1256] [cursor=pointer]:
+                            - generic [ref=e1257]: В корзину
+                        - generic [ref=e1258]:
+                          - generic [ref=e1259]: Доступно сегодня
+                          - link "в 48 аптеках" [ref=e1544] [cursor=pointer]:
+                            - /url: /omsk/products/kresferum-mikrofermenty-10000-ed-kapsuly-20-sht-227298#offers
+                - article [ref=e1262]:
+                  - button [ref=e1265] [cursor=pointer]:
+                    - img [ref=e1267]
+                  - generic [ref=e1269]:
+                    - link "Bestorme Пастилки освежающие, 20 г, 1 шт, манго + лайм, без сахара фото" [ref=e1545] [cursor=pointer]:
+                      - /url: /omsk/products/bestorme-pastilki-osvezhayushchie-20-g-1-sht-mango-laym-bez-sakhara-230335
+                      - img "Bestorme Пастилки освежающие, 20 г, 1 шт, манго + лайм, без сахара фото" [ref=e1273]
+                    - generic [ref=e1275]:
+                      - generic [ref=e1276]:
+                        - heading "Bestorme Пастилки освежающие, 20 г, 1 шт, манго + лайм, без сахара" [level=3] [ref=e1277]:
+                          - link "Bestorme Пастилки освежающие, 20 г, 1 шт, манго + лайм, без сахара" [ref=e1546] [cursor=pointer]:
+                            - /url: /omsk/products/bestorme-pastilki-osvezhayushchie-20-g-1-sht-mango-laym-bez-sakhara-230335
+                        - generic [ref=e1279]:
+                          - generic [ref=e1280]: "Действующее вещество:"
+                          - link "Аскорбиновая кислота" [ref=e1547] [cursor=pointer]:
+                            - /url: /omsk/catalog/search?search_query=%22%D0%90%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%B8%D1%81%D0%BB%D0%BE%D1%82%D0%B0%22
+                        - generic [ref=e1282]:
+                          - generic [ref=e1283]: "Производитель:"
+                          - paragraph [ref=e1284]: Пец-Хаас, Россия
+                      - generic [ref=e1285]:
+                        - generic [ref=e1286]:
+                          - generic [ref=e1288]: 79.00 ₽
+                          - button "В корзину" [ref=e1291] [cursor=pointer]:
+                            - generic [ref=e1292]: В корзину
+                        - generic [ref=e1293]:
+                          - generic [ref=e1294]: Доступно сегодня
+                          - link "в 48 аптеках" [ref=e1548] [cursor=pointer]:
+                            - /url: /omsk/products/bestorme-pastilki-osvezhayushchie-20-g-1-sht-mango-laym-bez-sakhara-230335#offers
+            - generic [ref=e1297]:
+              - button "Показать еще" [ref=e1298] [cursor=pointer]
+              - generic [ref=e1299]:
+                - generic [ref=e1300]:
+                  - link "1" [ref=e1301] [cursor=pointer]:
+                    - /url: /omsk/catalog/bad
+                  - link "2" [ref=e1302] [cursor=pointer]:
+                    - /url: /omsk/catalog/bad?page=2
+                  - link "3" [ref=e1303] [cursor=pointer]:
+                    - /url: /omsk/catalog/bad?page=3
+                  - link "4" [ref=e1304] [cursor=pointer]:
+                    - /url: /omsk/catalog/bad?page=4
+                  - link "5" [ref=e1305] [cursor=pointer]:
+                    - /url: /omsk/catalog/bad?page=5
+                  - link "6" [ref=e1306] [cursor=pointer]:
+                    - /url: /omsk/catalog/bad?page=6
+                  - img [ref=e1307]
+                  - link "386" [ref=e1311] [cursor=pointer]:
+                    - /url: /omsk/catalog/bad?page=386
+                - link [ref=e1312] [cursor=pointer]:
+                  - /url: /omsk/catalog/bad?page=2
+                  - img [ref=e1314]
+  - contentinfo [ref=e1316]:
+    - contentinfo [ref=e1318]:
+      - generic [ref=e1319]:
+        - navigation [ref=e1321]:
+          - generic [ref=e1322]:
+            - generic [ref=e1323]: Документы
+            - list [ref=e1324]:
+              - listitem [ref=e1325]:
+                - link "О проекте" [ref=e1326] [cursor=pointer]:
+                  - /url: /agreement/about-project
+              - listitem [ref=e1327]:
+                - link "Политика в области персональных данных" [ref=e1328] [cursor=pointer]:
+                  - /url: /agreement/privacy-policy
+              - listitem [ref=e1329]:
+                - link "Пользовательское соглашение" [ref=e1330] [cursor=pointer]:
+                  - /url: /agreement/user-agreement
+              - listitem [ref=e1331]:
+                - link "Кэшбэк за первый заказ" [ref=e1332] [cursor=pointer]:
+                  - /url: /promo/cashback/info
+              - listitem [ref=e1333]:
+                - link "Кэшбэк за заботу" [ref=e1334] [cursor=pointer]:
+                  - /url: /legal-information/referral
+              - listitem [ref=e1335]:
+                - link "Кэшбэк за каждый заказ" [ref=e1336] [cursor=pointer]:
+                  - /url: /promo/bonus-cashback
+              - listitem [ref=e1337]:
+                - link "Кэшбэк от производителя" [ref=e1338] [cursor=pointer]:
+                  - /url: /promo/cashback-ot-proizvoditelya/info
+          - generic [ref=e1339]:
+            - generic [ref=e1340]: Помощь
+            - list [ref=e1341]:
+              - listitem [ref=e1342]:
+                - link "Вопросы и ответы" [ref=e1343] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=e1344]:
+                - link "Как сделать заказ" [ref=e1345] [cursor=pointer]:
+                  - /url: /howto/order
+              - listitem [ref=e1346]:
+                - link "Поддержка" [ref=e1347] [cursor=pointer]:
+                  - /url: /support
+          - generic [ref=e1348]:
+            - generic [ref=e1349]: О нас
+            - list [ref=e1350]:
+              - listitem [ref=e1351]:
+                - link "Система сортировки" [ref=e1352] [cursor=pointer]:
+                  - /url: /value/about
+              - listitem [ref=e1353]:
+                - link "Журнал EXPERO" [ref=e1354] [cursor=pointer]:
+                  - /url: https://health.expero.ru/
+              - listitem [ref=e1355]:
+                - link "Вакансии" [ref=e1356] [cursor=pointer]:
+                  - /url: https://novosibirsk.hh.ru/employer/6146241?hhtmFrom=vacancy_search_list
+              - listitem [ref=e1357]:
+                - link "Аптеки" [ref=e1358] [cursor=pointer]:
+                  - /url: /pharmacies
+              - listitem [ref=e1359]:
+                - link "Наши партнёры" [ref=e1360] [cursor=pointer]:
+                  - /url: /vendors
+          - generic [ref=e1361]:
+            - generic [ref=e1362]: Партнёрам
+            - list [ref=e1363]:
+              - listitem [ref=e1364]:
+                - generic [ref=e1365] [cursor=pointer]: Сотрудничество для аптечных сетей
+        - generic [ref=e1367]:
+          - generic [ref=e1369]:
+            - generic [ref=e1370]:
+              - generic [ref=e1371]:
+                - link "8 800 551 60 65" [ref=e1372] [cursor=pointer]:
+                  - /url: tel:88005516065
+                - paragraph [ref=e1373]: Звонок по России бесплатный
+              - generic [ref=e1374]:
+                - link "support@expero.ru" [ref=e1375] [cursor=pointer]:
+                  - /url: mailto:support@expero.ru
+                - paragraph [ref=e1376]: Если остались вопросы
+              - generic [ref=e1377]:
+                - link "info@expero.ru" [ref=e1378] [cursor=pointer]:
+                  - /url: mailto:info@expero.ru
+                - paragraph [ref=e1379]: Размещение рекламы
+            - generic [ref=e1380]:
+              - generic [ref=e1381]: Соцсети
+              - link [ref=e1382] [cursor=pointer]:
+                - /url: https://t.me/+1ydthQiMvMhjYzFi
+                - img [ref=e1384]
+          - generic [ref=e1393]:
+            - paragraph [ref=e1394]: Наведите камеру и скачайте приложение EXPERO в Google Play и App Store
+            - generic [ref=e1395]:
+              - link:
+                - /url: https://redirect.appmetrica.yandex.com/serve/1109679588935567086?utm_source=buttons
+                - generic:
+                  - img
+              - link:
+                - /url: https://redirect.appmetrica.yandex.com/serve/1109679588935567086?utm_source=buttons
+                - generic:
+                  - img
+              - link [ref=e1396] [cursor=pointer]:
+                - /url: https://www.rustore.ru/catalog/app/team.expero.mobile.pharmacies
+                - img [ref=e1398]
+        - generic [ref=e1402]:
+          - paragraph:
+            - text: 630091, Новосибирская область, город Новосибирск, ул. Советская, д. 36, помещение 302. ИНН 5404265273, ОГРН 1225400003883
+            - generic: Информация на портале не призывает к самолечению, носит справочно‑информационный характер с использованием рекомендательных технологий.
+          - generic [ref=e1403]: © 2026 АО «Эксперо». Все права защищены
