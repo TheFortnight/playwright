@@ -8,6 +8,7 @@
     "test:6546": "playwright test tests/6546_kbop_static_bages_mock.spec.js --headed"
   },
   "devDependencies": {
+    "@playwright/mcp": "^0.0.70",
     "@playwright/test": "^1.52.0"
   }
 }

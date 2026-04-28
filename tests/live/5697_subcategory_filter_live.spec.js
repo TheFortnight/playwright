@@ -31,13 +31,17 @@ test('5697. subcategory filter updates goods list', async ({ page }) => {
   const checkboxInput = subcategoryOption.locator('input.checkbox-input');
 
   const requestPromise = page.waitForRequest(request => {
-    return request.method() === 'GET' && request.url().includes(SEARCH_PATH);
+    return request.url().includes(SEARCH_PATH);
   });
+
+  await expect(subcategoryOption.first()).toBeVisible({ timeout: 30000 });
+  await page.waitForTimeout(1000);
   await subcategoryOption.click({ force: true });
 
   await expect(checkboxInput).toBeChecked();
 
   const request = await requestPromise;
+  
   expect(request.method()).toBe('GET');
   expect(request.url()).toContain(SEARCH_PATH);
 
