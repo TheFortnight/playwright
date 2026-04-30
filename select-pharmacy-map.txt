@@ -1,0 +1,7 @@
+uid=7_0 RootWebArea "EXPERO - поиск и заказ лекарств в аптеках вашего города" url="https://staging.portal.phrm.tech/checkout/quick-order/monural-granuly-dlya-prigotovleniya-rastvora-dlya-priema-vnutr-3-g-1-sht-70622/select-pharmacy/map"
+  uid=7_1 banner
+  uid=7_35 main
+    uid=9_0 StaticText "Выбор аптеки"
+    uid=10_0 StaticText "Сервер не отвечает"
+    uid=10_1 StaticText "Не удалось обработать ваш запрос. Попробуйте еще раз позже"
+    uid=10_2 button "Попробовать еще раз"

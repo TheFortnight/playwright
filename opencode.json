@@ -33,12 +33,24 @@
     "C:\\Expero\\opencode\\playwright\\migration-memory.md"
   ],
   "mcp": {
+    "playwright": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "cmd",
+        "/c",
+        "npx",
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
     "chrome-devtools": {
       "type": "local",
       "command": [
         "npx",
         "-y",
-        "chrome-devtools-mcp@latest"
+        "chrome-devtools-mcp@latest",
+        "--headless"
       ],
       "enabled": true
     },
@@ -74,7 +86,7 @@
     "pm": {
       "description": "Project Manager - primary orchestrator. Plans workflow, invokes analysis/executor/reviewer subagents, enforces approval gates, and produces final reports.",
       "mode": "primary",
-      "model": "openai/gpt-5.4-mini",
+      "model": "gpt-5.4 mini",
       "steps": 40,
       "permission": {
         "read": "allow",
@@ -95,7 +107,7 @@
     "analysis": {
       "description": "Analysis subagent - investigates tests, reports, logs, TestIT, MCP browser evidence, and proposes repair/porting options. Never edits code.",
       "mode": "subagent",
-      "model": "openai/gpt-5.4-mini",
+      "model": "gpt-5.4 mini",
       "steps": 35,
       "permission": {
         "read": "allow",
@@ -110,7 +122,7 @@
     "executor": {
       "description": "Executor subagent - applies only explicitly approved code changes and runs verification commands when instructed.",
       "mode": "subagent",
-      "model": "gpt-5.4-mini",
+      "model": "gpt-5.4 mini",
       "steps": 30,
       "permission": {
         "read": "allow",
@@ -123,9 +135,9 @@
       "prompt": "You are the Executor subagent. Apply only the exact approved change. Do not redesign scenario logic. Do not modify unrelated files. Keep patches minimal. Preserve UTF-8. After editing, report changed files and run the approved verification command if instructed."
     },
     "reviewer": {
-      "description": "Reviewer subagent - validates patch quality, rule compliance, source-of-truth alignment, and verification results. Never edits code.",
+      "description": "Reviewer subagent - validates patch quality, rule compliance, source-of-truth alignment, and verification res/modelults. Never edits code.",
       "mode": "subagent",
-      "model": "gpt-5.4-mini",
+      "model": "gpt-5.4 mini",
       "steps": 25,
       "permission": {
         "read": "allow",
