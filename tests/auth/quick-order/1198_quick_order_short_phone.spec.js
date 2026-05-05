@@ -1,16 +1,25 @@
 const {
-    test,
-    expect
+  test,
+  expect
 } = require('@playwright/test');
 const {
-    getBaseUrl
+  getBaseUrl
 } = require('../../support/utils/env');
 const {
-    dismissOverlays
+  dismissOverlays
 } = require('../../support/utils/overlays');
 const {
-    skipOnProductionForTags
+  skipOnProductionForTags
 } = require('../../support/utils/production-guard');
+
+test.use({
+  permissions: [],
+  launchOptions: {
+    firefoxUserPrefs: {
+      'permissions.default.geo': 2
+    }
+  }
+});
 
 const baseUrl = getBaseUrl();
 const tags = ['express'];
@@ -18,104 +27,63 @@ const tags = ['express'];
 skipOnProductionForTags(tags);
 
 test('1198. quick order short phone number', async ({
-    page
+  page
 }) => {
-    await test.step('Search for a product and open offers link', async () => {
-        await page.goto(`${baseUrl}omsk/catalog`, {
-            waitUntil: 'domcontentloaded',
-            timeout: 60000,
-        });
-
-        await dismissOverlays(page);
-
-        const locationAlert = page.locator('body .location-alert, #location-alert');
-        const confirmCityButton = page.getByRole('button', {
-            name: 'Да, я здесь'
-        }).first();
-        await expect(confirmCityButton).toBeVisible({ timeout: 15000 });
-        await confirmCityButton.click();
-        await expect(locationAlert).toBeHidden({ timeout: 15000 });
-
-        const searchInput = page.locator('body .input-block');
-        await expect(searchInput).toBeVisible({
-            timeout: 15000
-        });
-        await searchInput.click();
-        await searchInput.fill('но-шпа');
-        await page.getByRole('button', { name: 'Найти' }).first().click();
-        await expect(page.locator('body .card').first()).toBeVisible({
-            timeout: 30000
-        });
-
-        const offersLink = page.locator('body .card__pharmacy.gtm-points_of_sale').first();
-        await expect(offersLink).toBeVisible({
-            timeout: 25000
-        });
-        await offersLink.scrollIntoViewIfNeeded();
-        await offersLink.hover();
-        await Promise.all([
-            page.waitForURL(/select-pharmacy\/map$|#offers$/, { waitUntil: 'domcontentloaded', timeout: 30000 }),
-            offersLink.evaluate((el) => el.click()),
-        ]);
-
-        if (page.url().includes('#offers')) {
-            await expect(page.locator('body .good-card__title')).toHaveText(/но-шпа/i, { timeout: 30000 });
-            await page.waitForLoadState('load', { timeout: 30000 });
-            const countLink = page.locator('body .good-card__count-link').first();
-            await expect(countLink).toHaveText(/в \d+ аптеках/i, { timeout: 30000 });
-            await countLink.scrollIntoViewIfNeeded();
-            await countLink.hover();
-            await Promise.all([
-                page.waitForURL(/\/select-pharmacy\/map$/, { waitUntil: 'domcontentloaded', timeout: 30000 }),
-                countLink.click({ force: true }),
-            ]);
-        }
-
-        await expect(page.getByText('Выбор аптеки')).toBeVisible({ timeout: 30000 });
-
+  await test.step('Open product page and reach list view', async () => {
+    await page.goto(`${baseUrl}omsk/products/omez-20-mg-kapsuly-kishechnorastvorimye-30-sht-61149`, {
+      waitUntil: 'domcontentloaded',
+      timeout: 60000,
     });
 
-    await test.step('Switch to list view and open quick order', async () => {
-        const listViewLink = page.getByRole('link', { name: 'Списком' }).first();
-        await expect(listViewLink).toBeVisible({
-            timeout: 30000
-        });
-        await listViewLink.scrollIntoViewIfNeeded();
-        await listViewLink.hover();
-        await Promise.all([
-            page.waitForURL(/\/select-pharmacy\/list$/, { waitUntil: 'domcontentloaded', timeout: 30000 }),
-            listViewLink.evaluate((el) => el.click()),
-        ]);
-        await expect(page.locator('body .search-result__card').first()).toBeVisible({
-            timeout: 65000
-        });
+    await dismissOverlays(page);
 
-        const bookButton = page.locator('body .order-btn').first();
-        await expect(bookButton).toBeVisible({
-            timeout: 30000
-        });
-        await bookButton.scrollIntoViewIfNeeded();
-        await bookButton.click();
+    await expect(page.locator('body .good-card__title')).toHaveText(/омез/i, {
+      timeout: 30000
+    });
+    await page.waitForLoadState('load', {
+      timeout: 30000
+    });
+  });
 
-        await expect(page.locator('.dialog .modal-container')).toBeVisible({
-            timeout: 15000
-        });
+  await test.step('Switch to list view and open quick order', async () => {
+    await page.waitForTimeout(1000);
+    const listViewLink = page.locator('body .tab-switcher__button').last();
+    await expect(listViewLink).toBeAttached({
+      timeout: 30000
+    });
+    await listViewLink.scrollIntoViewIfNeeded();
+    await listViewLink.hover();
+    await listViewLink.click();
+    await expect(page.locator('body .search-result__card').first()).toBeVisible({
+      timeout: 65000
     });
 
-    await test.step('Validate short phone error and active input', async () => {
-        await page.locator('#tel').click();
-        await page.locator('#tel').fill('00000000');
-        await expect(page.locator('#tel')).toBeFocused();
-        await expect.poll(async () => page.locator('#tel').evaluate((input) => input.selectionStart)).toBe(15);
-        await expect.poll(async () => page.locator('#tel').evaluate((input) => input.selectionEnd)).toBe(15);
-
-        await page.locator('body .agreement-wrapper .agreement-item:nth-child(2) .custom-checkbox').click();
-        await page.locator('body .agreement-wrapper .agreement-item:nth-child(3) .custom-checkbox').click();
-        await page.locator('.dialog .auth-form__code-btn').click();
-
-        const phoneError = page.locator('.dialog .form-group__label');
-        await expect(phoneError).toHaveText('Введите номер полностью', {
-            timeout: 5000
-        });
+    const bookButton = page.locator('body .order-btn').first();
+    await expect(bookButton).toBeVisible({
+      timeout: 30000
     });
+    await bookButton.scrollIntoViewIfNeeded();
+    await bookButton.click();
+
+    await expect(page.locator('.dialog .modal-container')).toBeVisible({
+      timeout: 15000
+    });
+  });
+
+  await test.step('Validate short phone error and active input', async () => {
+    await page.locator('#tel').click();
+    await page.locator('#tel').fill('00000000');
+    await expect(page.locator('#tel')).toBeFocused();
+    await expect.poll(async () => page.locator('#tel').evaluate((input) => input.selectionStart)).toBe(15);
+    await expect.poll(async () => page.locator('#tel').evaluate((input) => input.selectionEnd)).toBe(15);
+
+    await page.locator('body .agreement-wrapper .agreement-item:nth-child(2) .custom-checkbox').click();
+    await page.locator('body .agreement-wrapper .agreement-item:nth-child(3) .custom-checkbox').click();
+    await page.locator('.dialog .auth-form__code-btn').click();
+
+    const phoneError = page.locator('.dialog .form-group__label');
+    await expect(phoneError).toHaveText('Введите номер полностью', {
+      timeout: 5000
+    });
+  });
 });

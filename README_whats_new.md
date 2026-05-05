@@ -9,3 +9,4 @@
 - Ported the 1188 and 1189 auth flows to Playwright, and removed a brittle `networkidle` wait from the live 5697 catalog test.
 - Ported the 1190 auth close-outside flow and the 1191/1192 auth code VRTs, including the wrong-code assertion used by TestIT.
 - Added the 1195 quick-order auth port under a dedicated quick-order folder and added a production guard for `test`-tagged cases.
+- Aligned 1198 with the 1196 quick-order flow before the auth modal and verified Chromium, Firefox, and WebKit.
