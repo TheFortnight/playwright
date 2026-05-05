@@ -9,7 +9,7 @@ const tags = ['express'];
 skipOnProductionForTags(tags);
 
 test('1196. quick order empty phone number', async ({ page }) => {
-  await test.step('Search for a product and open the first card', async () => {
+  await test.step('Search for a product and open offers link', async () => {
     await page.goto(`${baseUrl}omsk/catalog`, {
       waitUntil: 'domcontentloaded',
       timeout: 60000,
@@ -29,16 +29,38 @@ test('1196. quick order empty phone number', async ({ page }) => {
     await page.getByRole('button', { name: 'Найти' }).first().click();
     await expect(page.locator('body .card').first()).toBeVisible({ timeout: 30000 });
 
-    const offersLink = page.getByRole('link', { name: /в \d+ аптеках/i }).first();
+    const offersLink = page.locator('body .card__pharmacy.gtm-points_of_sale').first();
     await expect(offersLink).toBeVisible({ timeout: 25000 });
     await offersLink.scrollIntoViewIfNeeded();
-    await offersLink.click();
+    await offersLink.hover();
+    await Promise.all([
+      page.waitForURL(/select-pharmacy\/map$|#offers$/, { waitUntil: 'domcontentloaded', timeout: 30000 }),
+      offersLink.evaluate((el) => el.click()),
+    ]);
+
+    if (page.url().includes('#offers')) {
+      await expect(page.locator('body .good-card__title')).toHaveText(/но-шпа/i, { timeout: 30000 });
+      await page.waitForLoadState('load', { timeout: 30000 });
+      const countLink = page.locator('body .good-card__count-link').first();
+      await expect(countLink).toHaveText(/в \d+ аптеках/i, { timeout: 30000 });
+      await countLink.scrollIntoViewIfNeeded();
+      await countLink.hover();
+      await countLink.click({ force: true });
+      await expect(page.getByText('Выбор аптеки')).toBeVisible({ timeout: 30000 });
+    }
+
+    await expect(page.getByText('Выбор аптеки')).toBeVisible({ timeout: 30000 });
   });
 
   await test.step('Switch to list view and open quick order', async () => {
     const listViewLink = page.getByRole('link', { name: 'Списком' }).first();
     await expect(listViewLink).toBeVisible({ timeout: 30000 });
-    await listViewLink.click();
+    await listViewLink.scrollIntoViewIfNeeded();
+    await listViewLink.hover();
+    await Promise.all([
+      page.waitForURL(/\/select-pharmacy\/list$/, { waitUntil: 'domcontentloaded', timeout: 30000 }),
+      listViewLink.evaluate((el) => el.click()),
+    ]);
     await expect(page.locator('body .search-result__card').first()).toBeVisible({ timeout: 65000 });
 
     const bookButton = page.locator('body .order-btn').first();

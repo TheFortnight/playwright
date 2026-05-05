@@ -1,0 +1,188 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - link [ref=e11] [cursor=pointer]:
+            - /url: /omsk
+            - img [ref=e13]
+          - button [ref=e15] [cursor=pointer]
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - generic [ref=e20] [cursor=pointer]:
+              - img [ref=e22]
+              - generic [ref=e24]: Омск
+            - generic [ref=e25]: 236 аптек
+          - generic [ref=e26]:
+            - button "Войти" [ref=e27] [cursor=pointer]
+            - link [ref=e28] [cursor=pointer]:
+              - /url: /profile/favorites
+              - img [ref=e30]
+            - link "Корзина" [ref=e35] [cursor=pointer]:
+              - /url: /basket
+              - generic [ref=e36]: Корзина
+              - img [ref=e39]
+        - generic [ref=e41]:
+          - search "Блок поиска лекарств" [ref=e43]:
+            - generic [ref=e44]:
+              - search "Поиск лекарств десктоп" [ref=e46]
+              - button "Найти" [ref=e47] [cursor=pointer]:
+                - generic [ref=e48]: Найти
+          - generic:
+            - generic:
+              - generic:
+                - button "Войти"
+                - link:
+                  - /url: /profile/favorites
+                  - generic:
+                    - img
+                - generic:
+                  - generic:
+                    - generic:
+                      - link "Корзина":
+                        - /url: /basket
+                        - generic: Корзина
+                        - generic:
+                          - generic:
+                            - img
+      - navigation "Main Menu" [ref=e53]:
+        - list [ref=e54]:
+          - listitem [ref=e55] [cursor=pointer]:
+            - link "Акции" [ref=e56]:
+              - /url: /promo
+          - listitem [ref=e57] [cursor=pointer]:
+            - link "Каталог" [ref=e58]:
+              - /url: /omsk/catalog
+              - img [ref=e60]
+              - text: Каталог
+          - listitem [ref=e62] [cursor=pointer]:
+            - link "Похудение" [ref=e63]:
+              - /url: /omsk/catalog/pokhudenie
+          - listitem [ref=e64] [cursor=pointer]:
+            - link "Аллергия" [ref=e65]:
+              - /url: /omsk/catalog/allergiya
+          - listitem [ref=e66] [cursor=pointer]:
+            - link "Обезболивающие средства" [ref=e67]:
+              - /url: /omsk/catalog/obezbolivayushchie-sredstva
+          - listitem [ref=e68] [cursor=pointer]:
+            - link "Антибиотики" [ref=e69]:
+              - /url: /omsk/catalog/antibiotiki
+          - listitem [ref=e70] [cursor=pointer]:
+            - link "БАД" [ref=e71]:
+              - /url: /omsk/catalog/bad
+          - listitem [ref=e72] [cursor=pointer]:
+            - link "Витамины" [ref=e73]:
+              - /url: /omsk/catalog/vitaminy
+          - listitem [ref=e74] [cursor=pointer]:
+            - link "Простуда и грипп" [ref=e75]:
+              - /url: /omsk/catalog/prostuda-i-gripp
+  - main [ref=e76]:
+    - generic [ref=e80]:
+      - navigation "breadcrumbs" [ref=e85]:
+        - link "Главная" [ref=e87] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e89]:
+          - generic: Каталог
+      - heading "Каталог" [level=1] [ref=e95]
+  - contentinfo [ref=e96]:
+    - contentinfo [ref=e98]:
+      - generic [ref=e99]:
+        - navigation [ref=e101]:
+          - generic [ref=e102]:
+            - generic [ref=e103]: Документы
+            - list [ref=e104]:
+              - listitem [ref=e105]:
+                - link "О проекте" [ref=e106] [cursor=pointer]:
+                  - /url: /agreement/about-project
+              - listitem [ref=e107]:
+                - link "Политика в области персональных данных" [ref=e108] [cursor=pointer]:
+                  - /url: /agreement/privacy-policy
+              - listitem [ref=e109]:
+                - link "Пользовательское соглашение" [ref=e110] [cursor=pointer]:
+                  - /url: /agreement/user-agreement
+              - listitem [ref=e111]:
+                - link "Кэшбэк за первый заказ" [ref=e112] [cursor=pointer]:
+                  - /url: /promo/cashback/info
+              - listitem [ref=e113]:
+                - link "Кэшбэк за заботу" [ref=e114] [cursor=pointer]:
+                  - /url: /legal-information/referral
+              - listitem [ref=e115]:
+                - link "Кэшбэк за каждый заказ" [ref=e116] [cursor=pointer]:
+                  - /url: /promo/bonus-cashback
+              - listitem [ref=e117]:
+                - link "Кэшбэк от производителя" [ref=e118] [cursor=pointer]:
+                  - /url: /promo/cashback-ot-proizvoditelya/info
+          - generic [ref=e119]:
+            - generic [ref=e120]: Помощь
+            - list [ref=e121]:
+              - listitem [ref=e122]:
+                - link "Вопросы и ответы" [ref=e123] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=e124]:
+                - link "Как сделать заказ" [ref=e125] [cursor=pointer]:
+                  - /url: /howto/order
+              - listitem [ref=e126]:
+                - link "Поддержка" [ref=e127] [cursor=pointer]:
+                  - /url: /support
+          - generic [ref=e128]:
+            - generic [ref=e129]: О нас
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - link "Система сортировки" [ref=e132] [cursor=pointer]:
+                  - /url: /value/about
+              - listitem [ref=e133]:
+                - link "Журнал EXPERO" [ref=e134] [cursor=pointer]:
+                  - /url: https://health.expero.ru/
+              - listitem [ref=e135]:
+                - link "Вакансии" [ref=e136] [cursor=pointer]:
+                  - /url: https://novosibirsk.hh.ru/employer/6146241?hhtmFrom=vacancy_search_list
+              - listitem [ref=e137]:
+                - link "Аптеки" [ref=e138] [cursor=pointer]:
+                  - /url: /pharmacies
+              - listitem [ref=e139]:
+                - link "Наши партнёры" [ref=e140] [cursor=pointer]:
+                  - /url: /vendors
+          - generic [ref=e141]:
+            - generic [ref=e142]: Партнёрам
+            - list [ref=e143]:
+              - listitem [ref=e144]:
+                - generic [ref=e145] [cursor=pointer]: Сотрудничество для аптечных сетей
+        - generic [ref=e147]:
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - link "8 800 551 60 65" [ref=e152] [cursor=pointer]:
+                  - /url: tel:88005516065
+                - paragraph [ref=e153]: Звонок по России бесплатный
+              - generic [ref=e154]:
+                - link "support@expero.ru" [ref=e155] [cursor=pointer]:
+                  - /url: mailto:support@expero.ru
+                - paragraph [ref=e156]: Если остались вопросы
+              - generic [ref=e157]:
+                - link "info@expero.ru" [ref=e158] [cursor=pointer]:
+                  - /url: mailto:info@expero.ru
+                - paragraph [ref=e159]: Размещение рекламы
+            - generic [ref=e160]:
+              - generic [ref=e161]: Соцсети
+              - link [ref=e162] [cursor=pointer]:
+                - /url: https://t.me/+1ydthQiMvMhjYzFi
+                - img [ref=e164]
+          - generic [ref=e173]:
+            - paragraph [ref=e174]: Наведите камеру и скачайте приложение EXPERO в Google Play и App Store
+            - generic [ref=e175]:
+              - link:
+                - /url: https://redirect.appmetrica.yandex.com/serve/1109679588935567086?utm_source=buttons
+                - generic:
+                  - img
+              - link:
+                - /url: https://redirect.appmetrica.yandex.com/serve/1109679588935567086?utm_source=buttons
+                - generic:
+                  - img
+              - link [ref=e176] [cursor=pointer]:
+                - /url: https://www.rustore.ru/catalog/app/team.expero.mobile.pharmacies
+                - img [ref=e178]
+        - generic [ref=e182]:
+          - paragraph:
+            - text: 630091, Новосибирская область, город Новосибирск, ул. Советская, д. 36, помещение 302. ИНН 5404265273, ОГРН 1225400003883
+            - generic: Информация на портале не призывает к самолечению, носит справочно‑информационный характер с использованием рекомендательных технологий.
+          - generic [ref=e183]: © 2026 АО «Эксперо». Все права защищены
