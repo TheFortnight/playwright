@@ -11,3 +11,4 @@
 - Added the 1195 quick-order auth port under a dedicated quick-order folder and added a production guard for `test`-tagged cases.
 - Aligned 1198 with the 1196 quick-order flow before the auth modal and verified Chromium, Firefox, and WebKit.
 - Ported 1199 quick-order invalid-code coverage and verified the flow on staging in Chromium, Firefox, and WebKit.
+- Ported 1200 quick-order short-code coverage and verified the flow on staging in Chromium, Firefox, and WebKit twice.
