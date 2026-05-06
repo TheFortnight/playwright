@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { getBaseUrl } = require('../../support/utils/env');
 const { dismissOverlays } = require('../../support/utils/overlays');
 const { skipOnProductionForTags } = require('../../support/utils/production-guard');
+const { fillQuickOrderPhoneAndRequestSms } = require('../../support/flows/quick-order');
 
 test.use({
   permissions: [],
@@ -49,10 +50,7 @@ test('1200. insert short sms code', async ({ page }) => {
 
   await test.step('Enter short SMS code and verify no auth state', async () => {
     await page.locator('#tel').click();
-    await page.locator('#tel').fill('0000000000');
-    await page.locator('body .agreement-wrapper .agreement-item:nth-child(2) .custom-checkbox').click();
-    await page.locator('body .agreement-wrapper .agreement-item:nth-child(3) .custom-checkbox').click();
-    await page.locator('.dialog .auth-form__code-btn').click();
+    await fillQuickOrderPhoneAndRequestSms(page, '0000000000');
 
     const codeInput = page.locator('.dialog .code-dialog__code-box input').first();
     await expect(codeInput).toBeVisible({ timeout: 45000 });

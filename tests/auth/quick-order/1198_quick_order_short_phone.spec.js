@@ -11,6 +11,7 @@ const {
 const {
   skipOnProductionForTags
 } = require('../../support/utils/production-guard');
+const { fillQuickOrderPhoneAndRequestSms } = require('../../support/flows/quick-order');
 
 test.use({
   permissions: [],
@@ -77,9 +78,7 @@ test('1198. quick order short phone number', async ({
     await expect.poll(async () => page.locator('#tel').evaluate((input) => input.selectionStart)).toBe(15);
     await expect.poll(async () => page.locator('#tel').evaluate((input) => input.selectionEnd)).toBe(15);
 
-    await page.locator('body .agreement-wrapper .agreement-item:nth-child(2) .custom-checkbox').click();
-    await page.locator('body .agreement-wrapper .agreement-item:nth-child(3) .custom-checkbox').click();
-    await page.locator('.dialog .auth-form__code-btn').click();
+    await fillQuickOrderPhoneAndRequestSms(page, '00000000');
 
     const phoneError = page.locator('.dialog .form-group__label');
     await expect(phoneError).toHaveText('Введите номер полностью', {

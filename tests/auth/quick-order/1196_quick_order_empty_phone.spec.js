@@ -11,6 +11,7 @@ const {
 const {
   skipOnProductionForTags
 } = require('../../support/utils/production-guard');
+const { fillQuickOrderPhoneAndRequestSms } = require('../../support/flows/quick-order');
 
 test.use({
   permissions: [],
@@ -73,9 +74,7 @@ test('1196. quick order empty phone number', async ({
   });
 
   await test.step('Validate empty phone error', async () => {
-    await page.locator('body .agreement-wrapper .agreement-item:nth-child(2) .custom-checkbox').click();
-    await page.locator('body .agreement-wrapper .agreement-item:nth-child(3) .custom-checkbox').click();
-    await page.locator('.dialog .auth-form__code-btn').click();
+    await fillQuickOrderPhoneAndRequestSms(page, '');
 
     const phoneError = page.locator('.dialog .form-group__label');
     await expect(phoneError).toHaveText('Введите номер телефона', {
