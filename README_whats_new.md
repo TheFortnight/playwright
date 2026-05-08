@@ -12,3 +12,4 @@
 - Aligned 1198 with the 1196 quick-order flow before the auth modal and verified Chromium, Firefox, and WebKit.
 - Ported 1199 quick-order invalid-code coverage and verified the flow on staging in Chromium, Firefox, and WebKit.
 - Ported 1200 quick-order short-code coverage and verified the flow on staging in Chromium, Firefox, and WebKit twice.
+- Ported 1225 basket auth VRT to Playwright, verified Chromium/Firefox/WebKit headed, and centralized Firefox geo prompt handling in config.

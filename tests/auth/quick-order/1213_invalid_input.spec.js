@@ -3,15 +3,6 @@ const { getBaseUrl } = require('../../support/utils/env');
 const { skipOnProductionForTags } = require('../../support/utils/production-guard');
 const { openQuickOrderBookingModalFromProductPage } = require('../../support/flows/quick-order');
 
-test.use({
-  permissions: [],
-  launchOptions: {
-    firefoxUserPrefs: {
-      'permissions.default.geo': 2,
-    },
-  },
-});
-
 const baseUrl = getBaseUrl();
 const tags = ['express'];
 

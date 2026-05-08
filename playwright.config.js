@@ -11,11 +11,15 @@ module.exports = defineConfig({
   use: {
     baseURL: getBaseUrl(),
     browserName: 'chromium',
+    permissions: [],
     viewport: { width: 1440, height: 780 },
     ignoreHTTPSErrors: true,
     serviceWorkers: 'block',
     launchOptions: {
       args: ['--deny-permission-prompts'],
+      firefoxUserPrefs: {
+        'permissions.default.geo': 2,
+      },
     },
   },
 });

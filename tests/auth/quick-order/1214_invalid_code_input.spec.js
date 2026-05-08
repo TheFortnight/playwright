@@ -4,15 +4,6 @@ const { skipOnProductionForTags } = require('../../support/utils/production-guar
 const { openQuickOrderBookingModalFromProductPage } = require('../../support/flows/quick-order');
 const { fillQuickOrderPhoneAndRequestSms } = require('../../support/flows/quick-order');
 
-test.use({
-  permissions: [],
-  launchOptions: {
-    firefoxUserPrefs: {
-      'permissions.default.geo': 2,
-    },
-  },
-});
-
 const baseUrl = getBaseUrl();
 const tags = ['express'];
 

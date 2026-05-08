@@ -13,15 +13,6 @@ const {
 } = require('../../support/utils/production-guard');
 const { fillQuickOrderPhoneAndRequestSms } = require('../../support/flows/quick-order');
 
-test.use({
-  permissions: [],
-  launchOptions: {
-    firefoxUserPrefs: {
-      'permissions.default.geo': 2
-    }
-  }
-});
-
 const baseUrl = getBaseUrl();
 const tags = ['express'];
 
