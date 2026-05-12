@@ -14,3 +14,4 @@
 - Ported 1200 quick-order short-code coverage and verified the flow on staging in Chromium, Firefox, and WebKit twice.
 - Ported 1225 basket auth VRT to Playwright, verified Chromium/Firefox/WebKit headed, and centralized Firefox geo prompt handling in config.
 - Ported 1226 basket auth wrong-code coverage to the current production checkout flow and verified Chromium, Firefox, and WebKit.
+- Added 1227 Playwright coverage for the basket auth SMS code empty-state check after requesting SMS.
