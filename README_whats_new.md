@@ -16,3 +16,4 @@
 - Ported 1226 basket auth wrong-code coverage to the current production checkout flow and verified Chromium, Firefox, and WebKit.
 - Added 1227 Playwright coverage for the basket auth SMS code empty-state check after requesting SMS.
 - Added 1229 Playwright coverage for resending the SMS code from the current basket auth flow.
+- Ported 1234 basket privacy-policy VRT to the current basket flow and verified Chromium, Firefox, and WebKit headed.
