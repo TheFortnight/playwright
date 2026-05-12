@@ -15,3 +15,4 @@
 - Ported 1225 basket auth VRT to Playwright, verified Chromium/Firefox/WebKit headed, and centralized Firefox geo prompt handling in config.
 - Ported 1226 basket auth wrong-code coverage to the current production checkout flow and verified Chromium, Firefox, and WebKit.
 - Added 1227 Playwright coverage for the basket auth SMS code empty-state check after requesting SMS.
+- Added 1229 Playwright coverage for resending the SMS code from the current basket auth flow.
