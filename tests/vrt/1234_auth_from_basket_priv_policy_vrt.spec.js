@@ -1,12 +1,13 @@
 const { test, expect } = require('@playwright/test');
 const { getBaseUrl } = require('../support/utils/env');
 const { dismissOverlays } = require('../support/utils/overlays');
+const { createDraftAPI } = require('../support/flows/basket');
 
 const baseUrl = getBaseUrl();
 
 test('1234. privacy policy opens from basket booking modal', async ({ page }) => {
-  await page.goto(`${baseUrl}omsk/catalog/zheludochno-kishechnye-sredstva`, {
-    waitUntil: 'load',
+  await page.goto(baseUrl, {
+    waitUntil: 'domcontentloaded',
     timeout: 45000,
   });
 
@@ -17,37 +18,12 @@ test('1234. privacy policy opens from basket booking modal', async ({ page }) =>
     await confirmCityButton.click();
   }
 
-  await expect(page.locator('body .card').first()).toBeVisible({ timeout: 35000 });
+  const draftId = await createDraftAPI(page, { baseUrl });
 
-  const firstBasketButton = page.locator('.card .basket-btn').first();
-  await expect(firstBasketButton).toBeVisible({ timeout: 20000 });
-  const basketButtonBox = await firstBasketButton.boundingBox();
-  expect(basketButtonBox).toBeTruthy();
-  await page.mouse.click(
-    basketButtonBox.x + basketButtonBox.width / 2,
-    basketButtonBox.y + basketButtonBox.height / 2,
-  );
-
-  await expect.poll(async () => page.evaluate(() => {
-    return document.querySelector('.header-top-right .basket__count')?.textContent?.trim()
-      || document.querySelector('.basket-btn__container .item-counter__wrapper')?.textContent?.trim()
-      || '';
-  }), { timeout: 25000 }).toBe('1');
-
-  await page.goto(`${baseUrl}basket`, {
+  await page.goto(`${baseUrl}checkout/basket/${draftId}/select-pharmacy`, {
     waitUntil: 'load',
     timeout: 30000,
   });
-
-  await expect(page).toHaveURL(/\/basket(?:$|[?#])/, { timeout: 30000 });
-  await expect(page.locator('body')).toContainText('Корзина', { timeout: 20000 });
-  await expect(page.locator('.basket-items')).toBeVisible({ timeout: 30000 });
-  await expect(page.locator('.basket-items .basket-item-desktop__body')).toBeVisible({ timeout: 20000 });
-
-  const choosePharmacyButton = page.locator('.basket-order__order-block .order-block__btn').first();
-  await expect(choosePharmacyButton).toBeVisible({ timeout: 15000 });
-  await expect(choosePharmacyButton).toBeEnabled({ timeout: 30000 });
-  await choosePharmacyButton.click();
 
   await expect(page.locator('#map')).toBeVisible({ timeout: 15000 });
   await expect(page.locator('body .lottie-loader .loaded')).toBeVisible({ timeout: 45000 });
@@ -70,7 +46,7 @@ test('1234. privacy policy opens from basket booking modal', async ({ page }) =>
   const modal = page.locator('.dialog .modal-container');
   await expect(modal).toBeVisible({ timeout: 15000 });
 
-  const privacyLink = page.locator('.agreement-links__link').first();
+  const privacyLink = page.locator('.agreement-links__link').filter({ hasText: 'Политикой в области персональных данных' }).first();
   const popupPromise = page.waitForEvent('popup');
   await privacyLink.click();
   const popup = await popupPromise;
