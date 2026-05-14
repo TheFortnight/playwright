@@ -1,0 +1,26 @@
+stages:
+  - test
+
+playwright:
+  image: mcr.microsoft.com/playwright:v1.52.0-jammy
+  stage: test
+  variables:
+    CI: 'true'
+    PW_ENV: staging
+  script:
+    - npm ci
+    - set +e
+    - npx playwright test
+    - TEST_STATUS=$?
+    - npm run allure:report
+    - exit $TEST_STATUS
+  artifacts:
+    expire_in: 1 week
+    when: always
+    reports:
+      junit: test-results/junit.xml
+    paths:
+      - playwright-report/
+      - test-results/
+      - allure-results/
+      - allure-report/

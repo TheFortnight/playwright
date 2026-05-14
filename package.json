@@ -5,10 +5,13 @@
   "type": "commonjs",
   "scripts": {
     "test": "playwright test",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
     "test:6546": "playwright test tests/6546_kbop_static_bages_mock.spec.js --headed"
   },
   "devDependencies": {
     "@playwright/mcp": "^0.0.70",
-    "@playwright/test": "^1.52.0"
+    "@playwright/test": "^1.52.0",
+    "allure-commandline": "^2.41.0",
+    "allure-playwright": "^3.1.0"
   }
 }

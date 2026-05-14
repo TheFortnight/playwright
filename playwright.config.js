@@ -5,6 +5,12 @@ module.exports = defineConfig({
   testDir: './tests',
   timeout: 60000,
   snapshotPathTemplate: 'visual-baselines/{testFileName}-snapshots/{arg}{-projectName}{-platform}{ext}',
+  reporter: [
+    ['line'],
+    ['html', { open: 'never' }],
+    ['junit', { outputFile: 'test-results/junit.xml' }],
+    ['allure-playwright', { outputFolder: 'allure-results', detail: true, suiteTitle: false }],
+  ],
   expect: {
     timeout: 15000,
   },
