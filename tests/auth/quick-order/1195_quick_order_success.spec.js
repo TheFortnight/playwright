@@ -1,8 +1,11 @@
-const { test, expect } = require('@playwright/test');
-const { getBaseUrl } = require('../../support/utils/env');
-const { dismissOverlays } = require('../../support/utils/overlays');
-const { getSmsCode } = require('../../support/utils/sms-code');
-const { skipOnProductionForTags } = require('../../support/utils/production-guard');
+const {
+  test,
+  expect,
+  getBaseUrl,
+  dismissOverlays,
+  getSmsCode,
+  skipOnProductionForTags,
+} = require('../../support/fixtures');
 
 const baseUrl = getBaseUrl();
 const tags = ['express', 'test'];

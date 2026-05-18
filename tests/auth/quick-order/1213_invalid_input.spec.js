@@ -1,7 +1,10 @@
-const { test, expect } = require('@playwright/test');
-const { getBaseUrl } = require('../../support/utils/env');
-const { skipOnProductionForTags } = require('../../support/utils/production-guard');
-const { openQuickOrderBookingModalFromProductPage } = require('../../support/flows/quick-order');
+const {
+  test,
+  expect,
+  getBaseUrl,
+  skipOnProductionForTags,
+  openQuickOrderBookingModalFromProductPage,
+} = require('../../support/fixtures');
 
 const baseUrl = getBaseUrl();
 const tags = ['express'];

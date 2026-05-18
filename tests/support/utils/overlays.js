@@ -6,7 +6,7 @@ async function dismissOverlays(page) {
     document.querySelector('#location-alert')?.remove();
   });
 
-  await page.getByRole('button', { name: 'Да, я здесь' }).first().click({ timeout: 5000 }).catch(() => {});
+  await page.getByRole('button', { name: 'Да, я здесь' }).first().click({ timeout: 5000, force: true }).catch(() => {});
 }
 
 module.exports = { dismissOverlays };
