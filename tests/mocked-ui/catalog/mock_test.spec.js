@@ -8,7 +8,20 @@ test.use({
 });
 
 test('mock catalog card', async ({ page }) => {
-  await page.route('**/api/v2/catalog/goods/medium/search**', async route => {
+  await page.route(/.*\/omsk\/catalog\/dermatologiya(?:\?.*)?$/, async route => {
+    const liveResponse = await route.fetch();
+    let html = await liveResponse.text();
+
+    html = html.replace(/Акридерм/g, 'Dr Aqua');
+    html = html.replace(/Кэшбэк 35&nbsp;₽/g, 'Кэшбэк 550&nbsp;₽');
+
+    await route.fulfill({
+      response: liveResponse,
+      body: html,
+    });
+  });
+
+  await page.route(/.*\/api\/v2\/catalog\/goods\/medium\/search\?.*need_elements=true.*/, async route => {
     await route.fulfill({
       status: 200,
       contentType: 'application/json',
@@ -16,11 +29,47 @@ test('mock catalog card', async ({ page }) => {
     });
   });
 
-  await page.route('**/api/api_276/marketing/cashback/from_manufacturers/terms/by_goods**', async route => {
+  await page.route(/.*\/api\/v2\/catalog\/goods\/medium\/search\?.*need_elements=false.*/, async route => {
     await route.fulfill({
       status: 200,
       contentType: 'application/json',
-      body: JSON.stringify([{
+      body: JSON.stringify({
+        pagination: { count: 0, total_count: 0, page: 1, total_pages: 0, next_page: null },
+        elements: [],
+      }),
+    });
+  });
+
+  await page.route(/.*\/api\/v2\/catalog\/goods\/medium\/search\/filters\/simplified\?.*/, async route => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        groups: [],
+        names: [],
+        forms: [],
+        general_properties: [],
+        packings: [],
+        amounts: [],
+        dosages: [],
+        volumes: [],
+        comments: [],
+        manufacturers: [],
+        countries: [],
+        inns: [],
+        assignments: [],
+        diseases: [],
+        target_organs: [],
+        symptoms: [],
+      }),
+    });
+  });
+
+  await page.route(/.*\/api\/api_276\/marketing\/cashback\/from_manufacturers\/terms\/by_goods.*/, async route => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify([{ 
         "good_id": 42313,
         "good_slug": "dr-aqua-sol-dlya-vann-morskaya-prirodnaya-sol-dlya-vann-1-kg-1-sht-103289",
         "has_cashback": true,
