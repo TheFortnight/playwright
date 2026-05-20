@@ -8,7 +8,6 @@ const SEARCH_PATH = '/goods/medium/search?group_id=15968';
 test('5697. subcategory filter updates goods list', async ({ page }) => {
   await page.goto(`${baseUrl}omsk`, { waitUntil: 'load', timeout: 30000 });
   await dismissOverlays(page);
-  await page.waitForLoadState('networkidle');
 
   await page.goto(`${baseUrl}catalog/bad`, { waitUntil: 'domcontentloaded', timeout: 45000 });
 
