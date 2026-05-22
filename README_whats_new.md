@@ -18,6 +18,7 @@
 - Added 1229 Playwright coverage for resending the SMS code from the current basket auth flow.
 - Added 1240 Playwright coverage for resending the SMS code again from the auth popup and verified Chromium, Firefox, and WebKit on staging.
 - Added 1247 Playwright coverage for retrying SMS send before the timer ends and verified Chromium, Firefox, and WebKit on staging.
+- Ported 1249 basket auth coverage for the short-phone validation path and verified Chromium, Firefox, and WebKit on staging.
 - Ported 1234 basket privacy-policy VRT to the current basket flow, then refactored it to reuse an API draft helper and verified Chromium, Firefox, and WebKit headed.
 - Added 1237 wrong-code-twice auth VRT and verified Chromium, Firefox, and WebKit headed in production.
 - Updated the live 5697 catalog test to remove a blocking `networkidle` wait and refreshed the 1185/1186 agreement baselines for current production layout.
