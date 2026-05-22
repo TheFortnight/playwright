@@ -22,3 +22,4 @@
 - Ported 1234 basket privacy-policy VRT to the current basket flow, then refactored it to reuse an API draft helper and verified Chromium, Firefox, and WebKit headed.
 - Added 1237 wrong-code-twice auth VRT and verified Chromium, Firefox, and WebKit headed in production.
 - Updated the live 5697 catalog test to remove a blocking `networkidle` wait and refreshed the 1185/1186 agreement baselines for current production layout.
+- Added 1282 basket auth change-phone coverage for the live resend flow and restored the empty-code assertion after resend.
