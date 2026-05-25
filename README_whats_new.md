@@ -23,3 +23,4 @@
 - Added 1237 wrong-code-twice auth VRT and verified Chromium, Firefox, and WebKit headed in production.
 - Updated the live 5697 catalog test to remove a blocking `networkidle` wait and refreshed the 1185/1186 agreement baselines for current production layout.
 - Added 1282 basket auth change-phone coverage for the live resend flow and restored the empty-code assertion after resend.
+- Added 1342 counter mock coverage and aligned the offers mock quantity and product ID for stable cross-browser auth flow verification.
