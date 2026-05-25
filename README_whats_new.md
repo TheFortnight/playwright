@@ -24,3 +24,4 @@
 - Updated the live 5697 catalog test to remove a blocking `networkidle` wait and refreshed the 1185/1186 agreement baselines for current production layout.
 - Added 1282 basket auth change-phone coverage for the live resend flow and restored the empty-code assertion after resend.
 - Added 1342 counter mock coverage and aligned the offers mock quantity and product ID for stable cross-browser auth flow verification.
+- Added 1343 counter max mocked port using the 1342-style offers flow and verified Chromium, Firefox, and WebKit.
