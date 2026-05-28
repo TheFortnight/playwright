@@ -1,5 +1,6 @@
 # What's New
 
+- Ported 1398 basket choose pharmacy layout VRT, aligned the live `указать` text, and captured production baselines across Chromium, Firefox, and WebKit.
 - Initial repository setup for first push.
 - Added repo-level `.gitignore` and configured the Git remote.
 - Ported Nightwatch auth popup and active-input VRT scenarios into Playwright.
