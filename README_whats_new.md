@@ -28,3 +28,4 @@
 - Added 1343 counter max mocked port using the 1342-style offers flow and verified Chromium, Firefox, and WebKit.
 - Ported 1344 quick-order counter minus coverage with live offer selection and verified Chromium, Firefox, and WebKit on staging.
 - Added 1399 live basket choose-pharmacy coverage with strict TestIT-aligned assertions and verified Chromium, Firefox, and WebKit.
+- Ported 1405 basket pharmacy search coverage for mixed letters, digits, and symbols, and verified Chromium, Firefox, WebKit, plus Chromium headed.
