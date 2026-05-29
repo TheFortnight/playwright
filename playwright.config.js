@@ -17,6 +17,7 @@ module.exports = defineConfig({
   use: {
     baseURL: getBaseUrl(),
     browserName: 'chromium',
+    video: 'retain-on-failure',
     permissions: [],
     viewport: { width: 1440, height: 780 },
     ignoreHTTPSErrors: true,
