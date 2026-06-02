@@ -32,3 +32,4 @@
 - Ported 1406 basket pharmacy search coverage with dynamic pharmacy-name filtering, added a basket quantity assertion, and verified Chromium, Firefox, and WebKit.
 - Ported 1405 basket pharmacy search coverage for mixed letters, digits, and symbols, and verified Chromium, Firefox, WebKit, plus Chromium headed.
 - Ported 1407 basket open-filter coverage with legacy-style opening-hours validation and verified Chromium, Firefox, and WebKit twice.
+- Ported 1408 basket 24h filter coverage with Firefox basket navigation and WebKit click stabilization, and verified Chromium, Firefox, and WebKit twice.
