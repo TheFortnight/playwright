@@ -1,5 +1,6 @@
 # What's New
 
+- Ported 1414 basket map pharmacy info address live coverage and verified Chromium, Firefox, and WebKit.
 - Enabled failure-only video capture for Playwright and Allure reports.
 - Ported 1398 basket choose pharmacy layout VRT, aligned the live `указать` text, and captured production baselines across Chromium, Firefox, and WebKit.
 - Initial repository setup for first push.
