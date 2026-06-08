@@ -33,3 +33,4 @@
 - Ported 1405 basket pharmacy search coverage for mixed letters, digits, and symbols, and verified Chromium, Firefox, WebKit, plus Chromium headed.
 - Ported 1407 basket open-filter coverage with legacy-style opening-hours validation and verified Chromium, Firefox, and WebKit twice.
 - Ported 1408 basket 24h filter coverage with Firefox basket navigation and WebKit click stabilization, and verified Chromium, Firefox, and WebKit twice.
+- Ported 1409 basket show-on-map coverage, aligned it to the default map/offers view, and verified Chromium, Firefox, and WebKit.
