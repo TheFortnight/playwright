@@ -90,7 +90,20 @@ test('mock catalog card', async ({ page }) => {
     name: 'Дерматология',
   });
   await expect(dermatologyLink).toBeVisible();
+
+  const dermatologySearchResponsePromise = page.waitForResponse(response =>
+    /\/api\/v2\/catalog\/goods\/medium\/search\?.*need_elements=true/.test(response.url())
+  );
+  const cashbackByGoodsResponsePromise = page.waitForResponse(response =>
+    /\/api\/api_276\/marketing\/cashback\/from_manufacturers\/terms\/by_goods/.test(response.url())
+  );
+
   await dermatologyLink.click();
+
+  await Promise.all([
+    dermatologySearchResponsePromise,
+    cashbackByGoodsResponsePromise,
+  ]);
 
   const cards = page.locator('body .card');
   await expect(cards.first()).toBeVisible();

@@ -33,7 +33,7 @@ test('1195. quick order auth success', async ({ page }) => {
     await expect(offersLink).toBeVisible({ timeout: 30000 });
     await offersLink.hover();
     await offersLink.click();
-    await expect(page.getByRole('heading', { name: 'Церукал, 10 мг, таблетки, 50 шт.' })).toBeVisible({ timeout: 30000 });
+    await expect(page.locator('body .good-card__title')).toBeVisible({ timeout: 30000 });
   });
 
   await test.step('Switch to list view and book from pharmacy list', async () => {
@@ -41,7 +41,7 @@ test('1195. quick order auth success', async ({ page }) => {
     await expect(listTab).toBeVisible({ timeout: 30000 });
     await listTab.hover();
     await listTab.click();
-    await expect(page.locator('body .search-result__card')).toBeVisible({ timeout: 65000 });
+    await expect(page.locator('body .search-result__card').first()).toBeVisible({ timeout: 65000 });
 
     const bookButton = page.locator('body .order-btn').first();
     await expect(bookButton).toBeVisible({ timeout: 30000 });

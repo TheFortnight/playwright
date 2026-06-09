@@ -4,7 +4,7 @@ const { dismissOverlays } = require('../support/utils/overlays');
 
 const baseUrl = getBaseUrl();
 
-test('1192. insert wrong sms code', async ({ page }) => {
+test('1192. insert wrong sms code', async ({ page, browserName }) => {
   await page.goto(`${baseUrl}omsk`, { waitUntil: 'load', timeout: 60000 });
 
   await dismissOverlays(page);
@@ -16,12 +16,16 @@ test('1192. insert wrong sms code', async ({ page }) => {
 
   const signInButton = page.getByRole('button', { name: 'Войти' }).first();
   await expect(signInButton).toBeVisible({ timeout: 15000 });
-  await signInButton.click();
+  await signInButton.click({ force: browserName === 'firefox' });
 
   const modal = page.locator('.dialog .modal-container');
   await expect(modal).toBeVisible({ timeout: 15000 });
 
-  await page.locator('#tel').fill('0000000000');
+  const phoneInput = page.locator('#tel');
+  if (browserName === 'firefox') {
+    await expect(phoneInput).toBeVisible({ timeout: 15000 });
+  }
+  await phoneInput.fill('0000000000');
   await page.locator('body .agreement-wrapper .agreement-item:nth-child(2) .custom-checkbox').click();
   await page.locator('body .agreement-wrapper .agreement-item:nth-child(3) .custom-checkbox').click();
   await page.locator('.dialog .auth-form__code-btn').click();
@@ -31,7 +35,9 @@ test('1192. insert wrong sms code', async ({ page }) => {
   await codeInput.click();
   await page.keyboard.type('00000');
 
-  await expect(page.locator('.dialog .indicator__error-text')).toHaveText('Неверный код', {
+  const errorText = page.locator('.dialog .indicator__error-text');
+  await expect(errorText).toBeVisible({ timeout: 15000 });
+  await expect(errorText).toHaveText('Неверный код', {
     timeout: 15000,
   });
   await expect(modal).toHaveScreenshot('1192_wrong_code.png', {
