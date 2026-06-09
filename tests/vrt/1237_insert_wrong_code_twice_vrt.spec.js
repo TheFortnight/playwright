@@ -31,13 +31,16 @@ test('1237. insert wrong sms code twice', async ({ page }) => {
 
   await codeInput.click();
   await page.keyboard.type('00000');
-  await expect(page.locator('.dialog .indicator__error-text')).toHaveText('Неверный код', {
+  const errorText = page.locator('.dialog .indicator__error-text');
+  await expect(errorText).toBeVisible({ timeout: 15000 });
+  await expect(errorText).toHaveText('Неверный код', {
     timeout: 15000,
   });
 
   await codeInput.click();
   await page.keyboard.type('11111');
-  await expect(page.locator('.dialog .indicator__error-text')).toHaveText('Неверный код', {
+  await expect(errorText).toBeVisible({ timeout: 15000 });
+  await expect(errorText).toHaveText('Неверный код', {
     timeout: 15000,
   });
 
