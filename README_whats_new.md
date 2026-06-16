@@ -1,5 +1,7 @@
 # What's New
 
+- Ported 1415 basket map item info unfold/fold live coverage and verified Chromium, Firefox, and WebKit.
+
 - Hardened 1244 basket change-phone coverage for the current resend flow and verified Chromium, Firefox, and WebKit.
 - Switched the mock catalog card test to a pure request/state mock and stabilized cashback rendering in Chromium, Firefox, and WebKit.
 - Ported 1414 basket map pharmacy info address live coverage and verified Chromium, Firefox, and WebKit.
