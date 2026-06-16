@@ -34,15 +34,27 @@ test('1244. change phone number from any page', async ({ page }) => {
 
   const changePhoneButton = page.locator('body .code-dialog__change-phone');
   await expect(changePhoneButton).toBeVisible({ timeout: 15000 });
+  await page.waitForTimeout(300);
   await changePhoneButton.click();
 
+  await Promise.race([
+    page.locator('.dialog .code-dialog__phone').waitFor({ state: 'hidden', timeout: 15000 }),
+    phoneInput.waitFor({ state: 'visible', timeout: 15000 }),
+  ]);
+
+  const sendSmsButton = page.locator('.dialog .auth-form__code-btn');
   await expect(phoneInput).toBeVisible({ timeout: 15000 });
+  await expect(phoneInput).toHaveValue('+7 (000) 000-00-00', { timeout: 15000 });
+  await expect(sendSmsButton).toBeVisible({ timeout: 15000 });
+  await expect(sendSmsButton).toBeEnabled({ timeout: 15000 });
+
   await phoneInput.click();
   await phoneInput.press('Control+A');
-  await page.keyboard.press('Backspace');
-  await page.keyboard.type('0000000000', { delay: 50 });
+  await phoneInput.press('Backspace');
+  await phoneInput.fill('0000000000');
 
-  await page.locator('.dialog .auth-form__code-btn').click();
+  await sendSmsButton.click();
 
+  await expect(page.locator('.dialog .code-dialog__phone')).toBeVisible({ timeout: 15000 });
   await expect(page.locator('.dialog .code-dialog__phone')).toHaveText('+7 (000) 000-00-00', { timeout: 15000 });
 });

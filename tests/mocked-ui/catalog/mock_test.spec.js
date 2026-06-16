@@ -12,8 +12,19 @@ test('mock catalog card', async ({ page }) => {
     const liveResponse = await route.fetch();
     let html = await liveResponse.text();
 
-    html = html.replace(/Акридерм/g, 'Dr Aqua');
-    html = html.replace(/Кэшбэк 35&nbsp;₽/g, 'Кэшбэк 550&nbsp;₽');
+    html = html.replace(/<script id="browserApp-state" type="application\/json">([\s\S]*?)<\/script>/, (_, browserAppStateJson) => {
+      const browserAppState = JSON.parse(browserAppStateJson);
+      browserAppState.storeState.marketing.cashbackByProducts['bepanten-5-maz-dlya-naruzhnogo-primeneniya-30-g-1-sht-89511'] = {
+        ...browserAppState.storeState.marketing.cashbackByProducts['bepanten-5-maz-dlya-naruzhnogo-primeneniya-30-g-1-sht-89511'],
+        has_cashback: true,
+        fixed_reward: {
+          ...browserAppState.storeState.marketing.cashbackByProducts['bepanten-5-maz-dlya-naruzhnogo-primeneniya-30-g-1-sht-89511'].fixed_reward,
+          value: 75000,
+        },
+      };
+
+      return `<script id="browserApp-state" type="application/json">${JSON.stringify(browserAppState)}</script>`;
+    });
 
     await route.fulfill({
       response: liveResponse,
@@ -21,15 +32,19 @@ test('mock catalog card', async ({ page }) => {
     });
   });
 
-  await page.route(/.*\/api\/v2\/catalog\/goods\/medium\/search\?.*need_elements=true.*/, async route => {
+  await page.route(/.*\/api\/api_281\/catalog\/goods\/search\?.*need_elements=true.*/, async route => {
+    const liveResponse = await route.fetch();
+    const liveBody = await liveResponse.json();
+
+    liveBody.pagination = mockBody.pagination;
+
     await route.fulfill({
-      status: 200,
-      contentType: 'application/json',
-      body: JSON.stringify(mockBody),
+      response: liveResponse,
+      body: JSON.stringify(liveBody),
     });
   });
 
-  await page.route(/.*\/api\/v2\/catalog\/goods\/medium\/search\?.*need_elements=false.*/, async route => {
+  await page.route(/.*\/api\/api_281\/catalog\/goods\/search\?.*need_elements=false.*/, async route => {
     await route.fulfill({
       status: 200,
       contentType: 'application/json',
@@ -40,7 +55,7 @@ test('mock catalog card', async ({ page }) => {
     });
   });
 
-  await page.route(/.*\/api\/v2\/catalog\/goods\/medium\/search\/filters\/simplified\?.*/, async route => {
+  await page.route(/.*\/api\/api_281\/catalog\/goods\/search\/filters\/simplified\?.*/, async route => {
     await route.fulfill({
       status: 200,
       contentType: 'application/json',
@@ -75,7 +90,7 @@ test('mock catalog card', async ({ page }) => {
         "has_cashback": true,
         "cashback_type": "fixed_reward",
         "fixed_reward": {
-          "value": 55000
+          "value": 75000
         },
         "percentage_reward": null
       }]),
@@ -91,21 +106,12 @@ test('mock catalog card', async ({ page }) => {
   });
   await expect(dermatologyLink).toBeVisible();
 
-  const dermatologySearchResponsePromise = page.waitForResponse(response =>
-    /\/api\/v2\/catalog\/goods\/medium\/search\?.*need_elements=true/.test(response.url())
-  );
-  const cashbackByGoodsResponsePromise = page.waitForResponse(response =>
-    /\/api\/api_276\/marketing\/cashback\/from_manufacturers\/terms\/by_goods/.test(response.url())
-  );
-
   await dermatologyLink.click();
-
-  await Promise.all([
-    dermatologySearchResponsePromise,
-    cashbackByGoodsResponsePromise,
-  ]);
 
   const cards = page.locator('body .card');
   await expect(cards.first()).toBeVisible();
-  await expect(page.locator('body .manufacturer-cashback').first()).toHaveText('Кэшбэк 550 ₽');
+  await expect(
+    page.locator('body .card', { hasText: 'Бепантен, 5%, мазь для наружного применения, 30 г, 1 шт.' })
+      .locator('.manufacturer-cashback')
+  ).toHaveText('Кэшбэк 750 ₽');
 });
