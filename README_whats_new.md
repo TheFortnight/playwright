@@ -1,5 +1,6 @@
 # What's New
 
+- Ported 1416 basket map pharmacy choose/comparison live coverage and verified Chromium, Firefox, and WebKit.
 - Ported 1415 basket map item info unfold/fold live coverage and verified Chromium, Firefox, and WebKit.
 
 - Hardened 1244 basket change-phone coverage for the current resend flow and verified Chromium, Firefox, and WebKit.
