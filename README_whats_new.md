@@ -42,3 +42,4 @@
 - Ported 1407 basket open-filter coverage with legacy-style opening-hours validation and verified Chromium, Firefox, and WebKit twice.
 - Ported 1408 basket 24h filter coverage with Firefox basket navigation and WebKit click stabilization, and verified Chromium, Firefox, and WebKit twice.
 - Ported 1409 basket show-on-map coverage, aligned it to the default map/offers view, and verified Chromium, Firefox, and WebKit.
+- Ported 1556 counter minus live coverage with the current quick-order flow, added a WebKit-safe list-tab wait, and verified Chromium, Firefox, and WebKit in production.
