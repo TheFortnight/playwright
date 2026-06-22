@@ -1,5 +1,6 @@
 # What's New
 
+- Ported 1557 quick-order success coverage with the current legacy helper flow and verified Chromium, Firefox, and WebKit on staging.
 - Ported 1553 quick-order counter-plus coverage and verified Chromium, Firefox, and WebKit on staging.
 - Ported 1552 quick-order close-by-X coverage and verified Chromium, Firefox, and WebKit.
 - Ported 1416 basket map pharmacy choose/comparison live coverage and verified Chromium, Firefox, and WebKit.
