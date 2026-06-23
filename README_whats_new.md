@@ -1,5 +1,6 @@
 # What's New
 
+- Ported 1559 quick-order close-out coverage with the current legacy helper flow and verified Chromium, Firefox, and WebKit on staging.
 - Updated 1556 to skip the `networkidle` wait, aligned 5697 with the live goods search request, and made 3923 derive the expected pharmacy count from the offers response.
 - Ported 1558 quick-order success-close coverage with the current legacy helper flow and verified Chromium, Firefox, and WebKit on staging.
 - Ported 1557 quick-order success coverage with the current legacy helper flow and verified Chromium, Firefox, and WebKit on staging.
