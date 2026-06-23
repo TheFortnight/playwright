@@ -118,8 +118,6 @@ test('1556. counter minus live', async ({ page, browserName }) => {
   await listTab.hover();
   await page.waitForTimeout(1000);
   await listTab.click();
-
-  await page.waitForLoadState('networkidle', { timeout: 30000 });
   await expect(page.locator('body .search-result__card').first()).toBeVisible({ timeout: 65000 });
 
   const offerButton = page.locator('body .order-btn').first();

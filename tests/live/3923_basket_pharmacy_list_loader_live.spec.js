@@ -10,6 +10,8 @@ test.use({
 });
 
 test('3923. basket pharmacy list loader live', async ({ page }) => {
+  let expectedCardCount;
+
   await test.step('Seed basket and open pharmacy list view', async () => {
     await page.goto(`${baseUrl}omsk`, {
       waitUntil: 'domcontentloaded',
@@ -24,6 +26,24 @@ test('3923. basket pharmacy list loader live', async ({ page }) => {
     }
 
     const draftId = await createDraftAPI(page, { baseUrl, quantity: 2 });
+    const offersResponsePromise = page.waitForResponse((response) => {
+      if (response.request().method() !== 'GET') {
+        return false;
+      }
+
+      const url = new URL(response.url());
+
+      return url.pathname === `/api/api_154/orders/draft/${draftId}/offers`
+        && url.searchParams.get('take') === '100'
+        && url.searchParams.get('skip') === '0'
+        && url.searchParams.get('need_elements') === 'true'
+        && url.searchParams.get('need_pagination') === 'true'
+        && url.searchParams.get('only_open_now_pharmacies') === 'false'
+        && url.searchParams.get('only_round_the_clock_pharmacies') === 'false'
+        && url.searchParams.get('only_full_set') === 'false'
+        && url.searchParams.get('order_by') === 'distance'
+        && url.searchParams.get('order_by_ascending') === 'true';
+    });
 
     await page.goto(`${baseUrl}checkout/basket/${draftId}/select-pharmacy`, {
       waitUntil: 'load',
@@ -43,6 +63,12 @@ test('3923. basket pharmacy list loader live', async ({ page }) => {
 
     await expect(listSwitcher).toBeVisible({ timeout: 30000 });
     await listSwitcher.click({ timeout: 30000 });
+
+    const offersResponse = await offersResponsePromise;
+    expect(offersResponse.ok()).toBeTruthy();
+
+    const offersData = await offersResponse.json();
+    expectedCardCount = Number(offersData?.pagination?.count ?? 0);
 
     await expect(page.locator('body .search-result__card').first()).toBeVisible({ timeout: 65000 });
   });
@@ -72,7 +98,15 @@ test('3923. basket pharmacy list loader live', async ({ page }) => {
       window.__spinnerObserver = observer;
     });
 
-    for (let attempt = 0; attempt < 60; attempt += 1) {
+    const maxAttempts = Math.max(60, expectedCardCount);
+
+    for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
+      const renderedCardCount = await page.locator('body .search-result__card').count();
+
+      if (renderedCardCount >= expectedCardCount) {
+        break;
+      }
+
       await page.evaluate(() => {
         window.scrollBy(0, 1200);
         document.scrollingElement?.dispatchEvent(new Event('scroll', { bubbles: true }));
@@ -81,7 +115,7 @@ test('3923. basket pharmacy list loader live', async ({ page }) => {
       await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     }
 
-    await expect(page.locator('body .search-result__card')).toHaveCount(55, { timeout: 30000 });
+    await expect(page.locator('body .search-result__card')).toHaveCount(expectedCardCount, { timeout: 30000 });
 
     spinnerSeen = await page.evaluate(() => Boolean(window.__spinnerSeen));
     if (spinnerSeen) {

@@ -3,7 +3,8 @@ const { getBaseUrl } = require('../support/utils/env');
 const { dismissOverlays } = require('../support/utils/overlays');
 
 const baseUrl = getBaseUrl();
-const SEARCH_PATH = '/goods/medium/search?group_id=15968';
+const SEARCH_REQUEST_ENDPOINT = '/api/api_281/catalog/goods/search';
+const SEARCH_REQUEST_GROUP_ID = '15968';
 
 test('5697. subcategory filter updates goods list', async ({ page }) => {
   await page.goto(`${baseUrl}omsk`, { waitUntil: 'load', timeout: 30000 });
@@ -30,7 +31,11 @@ test('5697. subcategory filter updates goods list', async ({ page }) => {
   const checkboxInput = subcategoryOption.locator('input.checkbox-input');
 
   const requestPromise = page.waitForRequest(request => {
-    return request.url().includes(SEARCH_PATH);
+    const requestUrl = new URL(request.url());
+
+    return request.method() === 'GET'
+      && requestUrl.pathname === SEARCH_REQUEST_ENDPOINT
+      && requestUrl.searchParams.get('group_id') === SEARCH_REQUEST_GROUP_ID;
   });
 
   await expect(subcategoryOption.first()).toBeVisible({ timeout: 30000 });
@@ -40,9 +45,11 @@ test('5697. subcategory filter updates goods list', async ({ page }) => {
   await expect(checkboxInput).toBeChecked();
 
   const request = await requestPromise;
-  
+
   expect(request.method()).toBe('GET');
-  expect(request.url()).toContain(SEARCH_PATH);
+  const requestUrl = new URL(request.url());
+  expect(requestUrl.pathname).toBe(SEARCH_REQUEST_ENDPOINT);
+  expect(requestUrl.searchParams.get('group_id')).toBe(SEARCH_REQUEST_GROUP_ID);
 
   const selectedFilterText = (await selectedFilterTextLocator.textContent() ?? '').trim();
   const appliedFilterText = (await page.locator('body .gtm-pharmacy_tags').first().textContent() ?? '').trim();
