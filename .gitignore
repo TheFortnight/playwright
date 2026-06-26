@@ -4,6 +4,7 @@ test-results/
 blob-report/
 allure-results/
 allure-report/
+visual-baselines/
 .playwright/
 .cache/
 *.log
